@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav {
+    background-color: #66f;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    /*border: 1px solid #000;*/
+}
+
+nav ul, nav ul li {
+    margin-right: 30px;
+}
+
+.logo {
+    display: flex;
+    width: 50%;
+    float: left;
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo img {
+    width: 5%;
+    margin-right: 20px;
+}
+
+.items {
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a {
+    color: #ddd;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    padding-top: 64px;
+    /*border: 1px solid #000;*/
+}
+
+.initial-content {
+    display: grid;
+    background-color: #66f;
+}
+
+.initial-content-text {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    align-self: center;
+    /*border: 1px solid #000;*/
+}
+
+.initial-content-btn {
+    display: flex;
+    justify-content: start;
+    padding: 0px 75px;
+}
+
+.discover, .signup {
+    padding: 15px;
+    margin: 10px 20px 10px 0px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.discover, .signup:hover {
+    color: #66f;
+    background-color: #fff;
+}
+
+.signup, .discover:hover {
+    background-color: #66f;
+    color: #fff;
+}
+
+.initial-content-text h1 {
+    align-content: center;
+    justify-content: space-evenly;
+    font-size: 52px;
+    color: #fff;
+    padding: 0px 75px;
+}
+
+.initial-content-text p {
+    color: #fff;
+    padding: 0px 75px;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+.initial-content-img {
+    justify-content: end;
+    grid-column-start: 6;
+    grid-column-end: 12;
+    /*border: 1px solid #000; */
+}
+
+.img-fundo {
+    padding-top: 100px;
+    max-height: 500px;
+    width: 650px;
+}
+
+.sponsors-area {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+    padding: 0px 15px;
+    /*border: 1px solid #000; */
+}
+
+.description-area {
+    display: grid;
+    justify-content: center;
+    margin: 30px 100px;
+    /*border: 1px solid #000; */
+}
+
+.description-title h4 {
+    text-align: center;
+    color: #66f;
+}
+
+.description-text {
+    margin: 5px 100px 50px;
+    font-size: 42px;
+    text-align: center;
+}
+
+.marketing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px;
+    /*border: 1px solid #000; */
+}
+
+.list-builder, .campaign-tracker, .analytics-tool {
+    display: grid;
+}
+
+.marketing-img, .marketing-title, .marketing-description {
+    display: flex;
+    justify-content: center;
+}
+
+.img-marketing-description {
+    max-width: 200px;
+    height: 200px;
+}
+
+.marketing-title {
+    font-weight: bold;
+    color: #2f363b;
+    margin-bottom: 15px;
+}
+
+.marketing-description {
+    color: #6b747b;
+    text-align: center;
+    margin: 0px 40px;
+}
+
+.content-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #66f;
+}
+
+.about-cedo, .links, .contact {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 75px 30px;
+}
+
+.footer-title {
+    padding: 0px 25px 0px;
+    color: #e2e1e8;
+    height: 35px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 0px 25px;
+    color: #e2e1e8;
+}
+
+.copyright {
+    background-color: #66f;
+    text-align: center;
+    color: #e2e1e8;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
