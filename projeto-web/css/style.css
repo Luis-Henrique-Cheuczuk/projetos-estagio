@@ -254,11 +254,15 @@ nav a:hover {
 
 @media only screen and (max-width: 800px) {
 
+    .logo img {
+        width: 20%;
+    }
+
     .initial-content-text {
         grid-column-end: 12;
         grid-row-start: 1;
         text-align: center;
-        padding-top: 50px;
+        padding-top: 100px;
         /*border: 1px solid #000;*/
     }
 
@@ -328,10 +332,6 @@ nav a:hover {
 
     .logo img {
         width: 20%;
-    }
-    
-    .initial-content-text h1 {
-        padding-top: 30px;
     }
 
     .initial-content-texth1, .initial-content-text p, .initial-content-btn, .initial-content-img {
