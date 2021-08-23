@@ -48,11 +48,6 @@ nav ul, nav ul li {
     border: none;
 }
 
-.menu {
-    display: none;
-    background-color: #66f; 
-}
-
 a {
     text-decoration: none;
     color: #fff;
@@ -330,16 +325,7 @@ nav a:hover {
     .logo img {
         width: 20%;
     }
-
-    .items {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-        padding-right: 50px;
-    }
-
+    
     .initial-content-text h1 {
         padding-top: 30px;
     }
