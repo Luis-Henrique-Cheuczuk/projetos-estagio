@@ -6,7 +6,6 @@
 
 .nav {
     background-color: #66f;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +19,7 @@ nav ul, nav ul li {
 }
 
 .logo {
+    padding: 15px;
     display: flex;
     width: 50%;
     float: left;
@@ -45,10 +45,6 @@ nav ul, nav ul li {
     list-style: none;
 }
 
-.nav button {
-    border: none;
-}
-
 a {
     text-decoration: none;
     color: #fff;
@@ -60,6 +56,12 @@ nav a {
 
 nav a:hover {
     color: #fff;
+}
+
+.nav button {
+    margin: 0px 15px;
+    border: none;
+    cursor: pointer;
 }
 
 .menu {
@@ -254,7 +256,7 @@ nav a:hover {
 @media only screen and (max-width: 1200px) {
 
 
-    .img-fundo {
+    .img-fundo .img{
         max-height: 400px;
         width: 450px;
     }
@@ -279,8 +281,13 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 800px) {
+    
+    .nav ul, .nav ul li {
+        margin-right: 10px;
+    }
 
     .initial-content-text {
+        grid-column-end: 12;
         text-align: center;
         padding-top: 100px;
         /*border: 1px solid #000;*/
@@ -295,7 +302,14 @@ nav a:hover {
     .img-fundo {
         padding-top: 60px;
         max-height: 350px;
+    }
+
+    .img-fundo .img {
         width: 100%;
+    }
+
+    .btn-slides {
+        padding-top: 50px;
     }
     
     .sponsors-area {
@@ -351,12 +365,25 @@ nav a:hover {
 
 
     .nav {
-        display: -webkit-inline-box;
         padding-top: 20px;
     }
 
+    .logo {
+
+    }
+
     .items {
-        align-items: center;
+        display: none;
+    }
+
+    .btn-slides {
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        background-color: #66f;
     }
 
     .logo img {
