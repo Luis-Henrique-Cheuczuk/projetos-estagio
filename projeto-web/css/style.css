@@ -37,12 +37,16 @@ nav ul, nav ul li {
     margin-right: 20px;
 }
 
-.items {
+.items, .items-mobile {
     width: 50%;
     float: right;
     display: flex;
     justify-content: flex-end;
     list-style: none;
+}
+
+.items-mobile {
+    display: none;
 }
 
 a {
@@ -363,17 +367,30 @@ nav a:hover {
 
 @media only screen and (max-width: 400px){
 
-
     .nav {
         padding-top: 20px;
     }
 
-    .logo {
-
-    }
-
     .items {
         display: none;
+    }
+
+    .items-mobile {
+        width: 20%;
+        display: none;
+        margin-top: 40px;
+    }
+
+    .items-mobile a {
+        display: block;
+    }
+
+    .items-mobile li {
+        margin-bottom: 25px;
+    }
+
+    .show {
+        display: block;
     }
 
     .btn-slides {
@@ -382,11 +399,17 @@ nav a:hover {
     }
 
     .menu {
-        display: flex;
+        position: fixed;
+        display: block;
+        right: 0;
+        top: 0;
         background-color: #66f;
     }
 
     .logo img {
+        position: fixed;
+        left: 10px;
+        top: 10px;
         width: 30px;
         padding-right: 10px;
     }

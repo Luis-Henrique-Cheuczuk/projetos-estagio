@@ -27,3 +27,8 @@ function setSlide(index) {
     slides[indexSlide].style.display = "block"
 
 }
+
+function Menu() {
+        document.getElementById("items-mobile").classList.toggle("show");
+        window.onclick
+}
