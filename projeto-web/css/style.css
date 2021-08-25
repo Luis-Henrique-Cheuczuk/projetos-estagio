@@ -62,6 +62,10 @@ nav a:hover {
     color: #fff;
 }
 
+.menu {
+    display: none;
+}
+
 .container {
     display: grid;
     padding-top: 45px;
@@ -94,12 +98,12 @@ nav a:hover {
     font-size: 18px;
 }
 
-.discover, .signup:hover {
+.discover, .signup:hover, .next:hover, .prev:hover {
     color: #66f;
     background-color: #fff;
 }
 
-.signup, .discover:hover {
+.signup, .discover:hover, .next, .prev {
     background-color: #66f;
     color: #fff;
 }
@@ -128,9 +132,28 @@ nav a:hover {
 }
 
 .img-fundo {
+    display: none;
     padding-top: 100px;
-    max-height: 500px;
+    padding-bottom: 10px;
+}
+
+.img-fundo .img {
+    display: block;
+    height: 400px;
     width: 650px;
+}
+
+.btn-slides {
+    display: flex;
+    justify-content: center;
+}
+
+.next, .prev {
+    margin: 0px 5px 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
 }
 
 .sponsors-area {
@@ -140,6 +163,7 @@ nav a:hover {
     padding: 0px 15px;
     /*border: 1px solid #000; */
 }
+
 
 .description-area {
     display: grid;

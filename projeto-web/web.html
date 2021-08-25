@@ -17,12 +17,13 @@
                 <div class="logo">
                     <img src="./img/img.png" alt="Logo" />
                 </div>
-                <!-- <button id="btn-menu" onclick="Menu()"><img class="menu" src="./img/Menu_icon_2_icon-icons.com_71856.ico" /></button>  -->
+                <button id="btn-menu" onclick="Menu()"><img class="menu" src="./img/Menu_icon_2_icon-icons.com_71856.ico" /></button>
                 <ul class="items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Details</a></li>
-                    <li><a href="#">Pricing</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Details</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="" onclick="Contact()">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -42,7 +43,23 @@
                 </div>
 
                 <div class="initial-content-img">
-                    <img class="img-fundo" src="./img/img-fundo.jpg" />
+                    <div class="img-fundo">
+                        <img class="img" src="./img/Testeimg.jpg" />
+                    </div>
+                    <div class="img-fundo">
+                        <img class="img" src="./img/Testeimg2.jpg" />
+                    </div>
+                    <div class="img-fundo">
+                        <img class="img" src="./img/Testeimg3.jpg" />
+                    </div>
+                    <div class="img-fundo">
+                        <img class="img" src="./img/Testeimg4.jpg" />
+                    </div>
+
+                    <div class="btn-slides">
+                        <button class="prev" onclick="setSlide(-1)">Anterior</button>
+                        <button class="next" onclick="setSlide(1)">Próximo</button>
+                    </div>
                 </div>
             </div>
 
@@ -128,11 +145,11 @@
                     </div>
                     <div class="contact">
                         <div class="footer-title">
-                            <h4>Contact</h4>
+                            <h4>Contato</h4>
                         </div>
                         <div class="footer-description">
-                        <p>22 Innovative, San Francisco, CA 94043, US</p>
-                        <p>contact@tivo.com | support@tivo.com</p>
+                        <p> Rua XV de Novembro, Centro, Guarapuava - PR, 85064-500 </p>
+                        <p> contato@letsgrow.com.br </p>
                         </div>
                     </div>
                 </div>
@@ -147,6 +164,8 @@
             </section>
         </div>
     </section>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
