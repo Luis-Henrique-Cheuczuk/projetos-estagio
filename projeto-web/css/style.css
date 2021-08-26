@@ -369,13 +369,34 @@ nav a:hover {
 
     .nav {
         padding-top: 20px;
+        /* border: 1px solid #000; */
+    }
+
+    img .menu {
+        padding: 0px;
     }
 
     .items {
         display: none;
     }
 
+    #nav.active .items-mobile {
+        display: block;
+    }
+
     .items-mobile {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 45px;
+        right: 0px;
+        color: #000;
+        background-color: #66f;
+        z-index: 1000;
+    }
+
+
+    /* .items-mobile {
         width: 20%;
         display: none;
         margin-top: 40px;
@@ -391,6 +412,10 @@ nav a:hover {
 
     .show {
         display: block;
+    } */
+
+    .items-mobile li {
+        padding: 15px;
     }
 
     .btn-slides {
@@ -401,8 +426,8 @@ nav a:hover {
     .menu {
         position: fixed;
         display: block;
-        right: 0;
-        top: 0;
+        right: 10px;
+        top: 0px;
         background-color: #66f;
     }
 
@@ -411,7 +436,6 @@ nav a:hover {
         left: 10px;
         top: 10px;
         width: 30px;
-        padding-right: 10px;
     }
 
     .initial-content-texth1, .initial-content-text p, .initial-content-btn, .initial-content-img {

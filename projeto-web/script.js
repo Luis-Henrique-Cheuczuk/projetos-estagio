@@ -28,7 +28,11 @@ function setSlide(index) {
 
 }
 
+const btnMenu = document.getElementsById('btn-menu')
+
 function Menu() {
-        document.getElementById("items-mobile").classList.toggle("show");
-        window.onclick
+    const nav = document.getElementById('nav')
+    nav.classList.toggle('active')
 }
+
+btnMenu.addEventListener('click', Menu)
