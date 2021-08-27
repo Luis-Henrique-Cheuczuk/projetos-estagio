@@ -24,14 +24,14 @@
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a href="" onclick="Contact()">Contact</a></li>
+                    <li><a href="" id="contact" onclick="Contact()">Contact</a></li>
                 </ul>
                 <ul class="items-mobile">
                     <li><a href="">Home</a></li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li class="modal"><a href="" id="contact" onclick="Contact()">Contact</a></li>
+                    <li><a href="" id="contact" onclick="Contact()">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -138,7 +138,7 @@
 
             <section>
                 <div class="map">
-                    
+
                 </div>
             </section>
 
@@ -183,6 +183,40 @@
             </section>
         </div>
     </section>
+
+    <div id="modal-screen" class="modal-screen">
+        <div class="modal">
+            <h3>Converse conosco!</h3>
+            <form>
+                <div class="input">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" maxlength="50"/>
+                </div>
+                <div class="input">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" maxlength="50"/>
+                </div>
+                <div class="input">
+                    <label for="select-subject">Assunto</label>
+                    <select id="select-subject">
+                        <option value="" selected disabled>Selecione...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" class="message" rows="5" cols="30"></textarea>
+                </div>
+                <div class="button">
+                    <button class="btn">Concluído</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>

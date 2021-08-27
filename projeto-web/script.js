@@ -36,12 +36,11 @@ btnMenu.addEventListener('click', Menu)
 
 
 //-------------------------------------------------------------
+const contact = document.getElementById('contact')
+
 function Contact() {
-    let name = prompt("Nome")
-    if(name == ""){
-        prompt("Insira seu nome")
-    }
-    while(name == "") {
-        prompt("Insira seu nome")
-    }
+    const modalscreen = document.getElementById('modal-screen')
+    modalscreen.classList.toggle('active')
 }
+
+contact.addEventListener('click', Contact)
