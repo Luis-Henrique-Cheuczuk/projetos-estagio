@@ -4,6 +4,8 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* -------------------------------- modal --------------------------------------------- */
+
 .modal-screen {
     width: 100vw;
     height: 100vh;
@@ -19,7 +21,7 @@
 
 .modal-screen.active {
     display: flex;
-}
+} 
 
 .modal {
     border-radius: 5px;
@@ -80,12 +82,13 @@ textarea {
     border: 1px solid #000;
     padding: 5px;
     background-color: #66f;
+    margin: 0px 10px;
 }
 
 .btn:hover {
     background-color: #3d3d9b;
 }
-
+/* -------------------------------- nav --------------------------------------------- */
 
 .nav {
     background-color: #66f;
@@ -98,7 +101,7 @@ textarea {
 }
 
 nav ul, nav ul li {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .logo {
@@ -135,6 +138,7 @@ nav ul, nav ul li {
 a {
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 nav a {
@@ -154,6 +158,8 @@ nav a:hover {
 .menu {
     display: none;
 }
+
+/* -------------------------------- container --------------------------------------------- */
 
 .container {
     display: grid;
@@ -245,6 +251,8 @@ nav a:hover {
     font-size: 16px;
 }
 
+/* -------------------------------- Propagandas --------------------------------------------- */
+
 .sponsors-area {
     display: flex;
     justify-content: center;
@@ -253,6 +261,7 @@ nav a:hover {
     /*border: 1px solid #000; */
 }
 
+/* -------------------------------- description --------------------------------------------- */
 
 .description-area {
     display: grid;
@@ -305,6 +314,8 @@ nav a:hover {
     margin: 0px 40px;
 }
 
+/* -------------------------------- footer --------------------------------------------- */
+
 .content-footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -340,6 +351,8 @@ nav a:hover {
     font-size: 15px;
 }
 
+/* -------------------------------- 1200px --------------------------------------------- */
+
 @media only screen and (max-width: 1200px) {
 
 
@@ -366,6 +379,8 @@ nav a:hover {
     }
 
 }
+
+/* -------------------------------- 800px --------------------------------------------- */
 
 @media only screen and (max-width: 800px) {
     
@@ -451,6 +466,8 @@ nav a:hover {
     }
 
 }
+
+/* -------------------------------- 400px --------------------------------------------- */
 
 @media only screen and (max-width: 400px){
 

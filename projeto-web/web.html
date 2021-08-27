@@ -24,14 +24,14 @@
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a href="" id="contact" onclick="Contact()">Contact</a></li>
-                </ul>
+                    <li><a id="contact-modal" onclick="ContactModal()">Contact</a></li>
+                </ul>  
                 <ul class="items-mobile">
                     <li><a href="">Home</a></li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a href="" id="contact" onclick="Contact()">Contact</a></li>
+                    <li><a id="contact-modal" onclick="ContactModal()">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -184,25 +184,25 @@
         </div>
     </section>
 
-    <div id="modal-screen" class="modal-screen">
+    <dialog id="modal-screen" class="modal-screen">
         <div class="modal">
             <h3>Converse conosco!</h3>
             <form>
                 <div class="input">
-                    <label for="name">Nome</label>
+                    <label for="name">Insira seu nome</label>
                     <input type="text" id="name" name="name" maxlength="50"/>
                 </div>
                 <div class="input">
-                    <label for="email">E-mail</label>
+                    <label for="email">Insira seu e-mail</label>
                     <input type="email" id="email" name="email" maxlength="50"/>
                 </div>
                 <div class="input">
                     <label for="select-subject">Assunto</label>
                     <select id="select-subject">
                         <option value="" selected disabled>Selecione...</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                        <option>Aprender PHP</option>
+                        <option>Problemas de configuração</option>
+                        <option>Erro no código</option>
                         <option>Outros</option>
                     </select>
                 </div>
@@ -211,12 +211,13 @@
                     <textarea id="message" class="message" rows="5" cols="30"></textarea>
                 </div>
                 <div class="button">
-                    <button class="btn">Concluído</button>
+                    <button class="btn" type="submit">Concluído</button>
+                    <button id="cancel" class="btn">Cancelar</button>
                 </div>
 
             </form>
         </div>
-    </div>
+    </dialog>
 
     <script src="./script.js"></script>
 </body>

@@ -25,7 +25,7 @@ function setSlide(index) {
     }
 }
 //-------------------------------------------------------------
-const btnMenu = document.getElementsById('btn-menu')
+const btnMenu = document.getElementById('btn-menu')
 
 function Menu() {
     const nav = document.getElementById('nav')
@@ -36,10 +36,13 @@ btnMenu.addEventListener('click', Menu)
 
 
 //-------------------------------------------------------------
-const contact = document.getElementById('contact')
+const contact = document.getElementById('contact-modal')
 
-function Contact() {
+function ContactModal() {
     const modalscreen = document.getElementById('modal-screen')
+    modalscreen.addEventListener('click', (e) => {
+        console.log(e.target)
+    })
     modalscreen.classList.toggle('active')
 }
 
