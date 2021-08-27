@@ -287,7 +287,11 @@ nav a:hover {
 @media only screen and (max-width: 800px) {
     
     .nav ul, .nav ul li {
-        margin-right: 10px;
+        margin-right: 0px;
+    }
+
+    .nav ul li a {
+        margin-right: 20px;
     }
 
     .initial-content-text {
@@ -372,10 +376,6 @@ nav a:hover {
         /* border: 1px solid #000; */
     }
 
-    img .menu {
-        padding: 0px;
-    }
-
     .items {
         display: none;
     }
@@ -387,35 +387,17 @@ nav a:hover {
     .items-mobile {
         display: none;
         position: absolute;
-        width: 100%;
+        width: 25%;
         top: 45px;
         right: 0px;
         color: #000;
         background-color: #66f;
-        z-index: 1000;
+        z-index: 1;
     }
-
-
-    /* .items-mobile {
-        width: 20%;
-        display: none;
-        margin-top: 40px;
-    }
-
-    .items-mobile a {
-        display: block;
-    }
-
-    .items-mobile li {
-        margin-bottom: 25px;
-    }
-
-    .show {
-        display: block;
-    } */
 
     .items-mobile li {
         padding: 15px;
+        border-bottom: 1px solid #ccc;
     }
 
     .btn-slides {

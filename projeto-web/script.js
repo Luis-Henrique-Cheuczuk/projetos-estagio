@@ -23,11 +23,8 @@ function setSlide(index) {
         let style = (indexSlide == i) ? "block" : "none"
         slides[i].style.display = style
     }
-
-    slides[indexSlide].style.display = "block"
-
 }
-
+//-------------------------------------------------------------
 const btnMenu = document.getElementsById('btn-menu')
 
 function Menu() {
@@ -36,3 +33,15 @@ function Menu() {
 }
 
 btnMenu.addEventListener('click', Menu)
+
+
+//-------------------------------------------------------------
+function Contact() {
+    let name = prompt("Nome")
+    if(name == ""){
+        prompt("Insira seu nome")
+    }
+    while(name == "") {
+        prompt("Insira seu nome")
+    }
+}
