@@ -31,23 +31,17 @@ function Menu() {
     const nav = document.getElementById('nav')
     nav.classList.toggle('active')
 }
-
-btnMenu.addEventListener('click', Menu)
-
-
 //-------------------------------------------------------------
-const contact = document.getElementById('contact')
-const signup = document.getElementById('signup')
-
 function Modal() {
     const modalcontact = document.getElementById('modal-screen-contact')
-    modalcontact.classList.toggle('active')
+    modal = modalcontact.classList.add('active')
 }
 
-contact.addEventListener('click', Modal)
-
 //-------------------------------------------------------------
-
+function Cancel(){
+    const modalcontact = document.getElementById('modal-screen-contact')
+    modal = modalcontact.classList.remove('active')
+}
 
 //-------------------------------------------------------------
 function limpa_formulário_cep() {
@@ -56,7 +50,8 @@ function limpa_formulário_cep() {
     document.getElementById('bairro').value = ("");
     document.getElementById('cidade').value = ("");
     document.getElementById('uf').value = ("");
-    document.getElementById('ibge').value = ("");
+    document.getElementById('complemento').value = ("");
+    document.getElementById('number').value =("");
 }
 
 function meu_callback(conteudo) {
@@ -66,7 +61,6 @@ function meu_callback(conteudo) {
         document.getElementById('bairro').value = (conteudo.bairro);
         document.getElementById('cidade').value = (conteudo.localidade);
         document.getElementById('uf').value = (conteudo.uf);
-        document.getElementById('ibge').value = (conteudo.ibge);
     } //end if.
     else {
         //CEP não Encontrado.
@@ -94,7 +88,6 @@ function pesquisacep(valor) {
             document.getElementById('bairro').value = "...";
             document.getElementById('cidade').value = "...";
             document.getElementById('uf').value = "...";
-            document.getElementById('ibge').value = "...";
 
             //Cria um elemento javascript.
             var script = document.createElement('script');

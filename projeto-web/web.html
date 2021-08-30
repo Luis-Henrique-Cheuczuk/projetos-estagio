@@ -184,24 +184,30 @@
         <div id="modal-screen-contact" class="modal-screen">
             <div class="modal-contact">
                 <h3>Converse conosco!</h3>
-                <form method="" action="">
+                <form method="post" action="#">
+                    <label>Nome:</label>
+                    <input type="text" name="name" id="name" size="40" maxlength="40" required />
+                    <label>E-mail:</label>
+                    <input type="email" name="email" id="email" size="40" maxlength="40" required />
                     <label>Cep:</label>
-                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                            onblur="pesquisacep(this.value);" /><br />
-                    <label>Rua:</label>
-                    <input name="rua" type="text" id="rua" size="60" /><br />
-                    <label>Bairro:</label>
-                    <input name="bairro" type="text" id="bairro" size="40" /><br />
+                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
+                            onblur="pesquisacep(this.value);" required />
                     <label>Cidade:</label>
-                    <input name="cidade" type="text" id="cidade" size="40" /><br />
+                    <input name="cidade" type="text" id="cidade" size="40" maxlength="40" required />
                     <label>Estado:</label>
-                    <input name="uf" type="text" id="uf" size="2" /><br />
-                    <label>IBGE:</label>
-                    <input name="ibge" type="text" id="ibge" size="8" /><br />
+                    <input name="uf" type="text" id="uf" size="2" required />
+                    <label>Rua:</label>
+                    <input name="rua" type="text" id="rua" size="40" maxlength="40" required />
+                    <label>Bairro:</label>
+                    <input name="bairro" type="text" id="bairro" size="40" maxlength="40" required />
+                    <label>Complemento:</label>
+                    <input name="complemento" type="text" id="complemento" size="40" maxlength="40" />
+                    <label>nº</label>
+                    <input type="text" name="number" id="number" size="10" maxlength="5" required />
                 </form>
                 <div class="button">
-                    <button class="btn" type="submit">Concluído</button>
-                    <button id="cancel" class="btn">Cancelar</button>
+                    <button class="btn" type="submit" onclick="Cancel()">Concluído</button> <!-- Função Cancel provisório, como não envia dados, só para fechar a tela modal -->
+                    <button id="cancel" class="btn" onclick="Cancel()">Cancelar</button>
                 </div>
 
                 </form>
