@@ -24,14 +24,14 @@
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a id="contact-modal" onclick="ContactModal()">Contact</a></li>
-                </ul>  
+                    <li><a id="contact-modal" onclick="Modal()">Contact</a></li>
+                </ul>
                 <ul class="items-mobile">
                     <li><a href="">Home</a></li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a id="contact-modal" onclick="ContactModal()">Contact</a></li>
+                    <li><a id="contact-modal" onclick="Modal()">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -137,12 +137,6 @@
             </section>
 
             <section>
-                <div class="map">
-
-                </div>
-            </section>
-
-            <section>
                 <div class="content-footer">
                     <div class="about-cedo">
                         <div class="footer-title">
@@ -184,40 +178,36 @@
         </div>
     </section>
 
-    <dialog id="modal-screen" class="modal-screen">
-        <div class="modal">
-            <h3>Converse conosco!</h3>
-            <form>
-                <div class="input">
-                    <label for="name">Insira seu nome</label>
-                    <input type="text" id="name" name="name" maxlength="50"/>
-                </div>
-                <div class="input">
-                    <label for="email">Insira seu e-mail</label>
-                    <input type="email" id="email" name="email" maxlength="50"/>
-                </div>
-                <div class="input">
-                    <label for="select-subject">Assunto</label>
-                    <select id="select-subject">
-                        <option value="" selected disabled>Selecione...</option>
-                        <option>Aprender PHP</option>
-                        <option>Problemas de configuração</option>
-                        <option>Erro no código</option>
-                        <option>Outros</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" class="message" rows="5" cols="30"></textarea>
-                </div>
+    <!-- Tela Modal -->
+
+    <section>
+        <div id="modal-screen-contact" class="modal-screen">
+            <div class="modal-contact">
+                <h3>Converse conosco!</h3>
+                <form method="" action="">
+                    <label>Cep:</label>
+                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);" /><br />
+                    <label>Rua:</label>
+                    <input name="rua" type="text" id="rua" size="60" /><br />
+                    <label>Bairro:</label>
+                    <input name="bairro" type="text" id="bairro" size="40" /><br />
+                    <label>Cidade:</label>
+                    <input name="cidade" type="text" id="cidade" size="40" /><br />
+                    <label>Estado:</label>
+                    <input name="uf" type="text" id="uf" size="2" /><br />
+                    <label>IBGE:</label>
+                    <input name="ibge" type="text" id="ibge" size="8" /><br />
+                </form>
                 <div class="button">
                     <button class="btn" type="submit">Concluído</button>
                     <button id="cancel" class="btn">Cancelar</button>
                 </div>
 
-            </form>
+                </form>
+            </div>
         </div>
-    </dialog>
+    </section>
 
     <script src="./script.js"></script>
 </body>
