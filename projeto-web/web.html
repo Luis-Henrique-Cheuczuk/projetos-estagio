@@ -199,9 +199,19 @@
                     <input type="text" name="name" id="name" size="40" maxlength="40" title="Digite seu nome" required />
                     <label>E-mail:</label>
                     <input type="email" name="email" id="email" size="40" maxlength="40" title="Digite seu e-mail" required />
+                    <label>Assunto:</label>
+                    <select id="subject">
+                        <option value="" selected disabled>Selecione...</option>
+                        <option value="php">Quero aprender PHP</option>
+                        <option value="download">Quais ferramentas baixar?</option>
+                        <option value="error">Erros de compilação</option>
+                        <option value="other">Outros</option>
+                    </select>
+                    <label>Mensagem:</label>
+                    <textarea rows="3" cols="40"></textarea>
                     <label>Cep:</label>
                     <input name="cep" type="text" id="cep" value="" size="10" maxlength="8" title="Digite seu CEP"
-                            onblur="pesquisacep(this.value);" required />
+                        onblur="pesquisacep(this.value);" required />
                     <label>Cidade:</label>
                     <input name="cidade" type="text" id="cidade" size="40" maxlength="40" required />
                     <label>Estado:</label>

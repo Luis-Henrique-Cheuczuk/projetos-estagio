@@ -24,14 +24,15 @@
 
 .modal-contact {
     background-color: #fff;
-    margin: 15px;
+    margin: 10px;
+    border: 1px solid #000;
 }
 
 .modal-contact h3 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     background-color: #66f;
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
 
 .modal-contact h3, .btn {
@@ -43,21 +44,24 @@
     margin-left: 5px;
 }
 
-.modal-contact h3, input, label .btn {
+.modal-contact h3, input, label, select, textarea .btn {
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-input {
-    max-width: 350px;
-    margin: 5px;
+ input, select, textarea {
+    margin: 1px 5px;
     padding: 3px;
     outline: 0;
+}  
+
+textarea {
+    resize: none;
 }
 
 .button {
     display: flex;
     justify-content: center;
-    border-top: 2px solid #66f;
+    border-top: 2px solid #66f; 
 }
 
 .btn {
@@ -65,7 +69,7 @@ input {
     border: 1px solid #000;
     padding: 5px;
     background-color: #66f;
-    margin: 5px 10px;
+    margin: 3px 10px;
 }
 
 .btn:hover {
