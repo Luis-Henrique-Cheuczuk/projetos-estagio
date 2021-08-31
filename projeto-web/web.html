@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
     <link rel="icon" href="./img/unity_icon_191769.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
     <title>Tivo SaaS App Website Bootstrap HTML Template</title>
@@ -137,6 +140,13 @@
             </section>
 
             <section>
+                <div id="map"></div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+                async>
+                </script>
+            </section>
+
+            <section>
                 <div class="content-footer">
                     <div class="about-cedo">
                         <div class="footer-title">
@@ -186,20 +196,20 @@
                 <h3>Converse conosco!</h3>
                 <form method="post" action="#">
                     <label>Nome:</label>
-                    <input type="text" name="name" id="name" size="40" maxlength="40" required />
+                    <input type="text" name="name" id="name" size="40" maxlength="40" title="Digite seu nome" required />
                     <label>E-mail:</label>
-                    <input type="email" name="email" id="email" size="40" maxlength="40" required />
+                    <input type="email" name="email" id="email" size="40" maxlength="40" title="Digite seu e-mail" required />
                     <label>Cep:</label>
-                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
+                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="8" title="Digite seu CEP"
                             onblur="pesquisacep(this.value);" required />
                     <label>Cidade:</label>
                     <input name="cidade" type="text" id="cidade" size="40" maxlength="40" required />
                     <label>Estado:</label>
                     <input name="uf" type="text" id="uf" size="2" required />
                     <label>Rua:</label>
-                    <input name="rua" type="text" id="rua" size="40" maxlength="40" required />
+                    <input name="rua" type="text" id="rua" size="40" maxlength="40" title="Digite sua rua" required />
                     <label>Bairro:</label>
-                    <input name="bairro" type="text" id="bairro" size="40" maxlength="40" required />
+                    <input name="bairro" type="text" id="bairro" size="40" maxlength="40" title="Digite seu bairro" required />
                     <label>Complemento:</label>
                     <input name="complemento" type="text" id="complemento" size="40" maxlength="40" />
                     <label>nº</label>
