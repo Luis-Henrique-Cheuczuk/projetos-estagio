@@ -27,14 +27,14 @@
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a id="contact-modal" onclick="Modal()">Contact</a></li>
+                    <li><a id="contact-modal" onclick="openModal()">Contact</a></li>
                 </ul>
                 <ul class="items-mobile">
                     <li><a href="">Home</a></li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Details</a></li>
                     <li><a href="">Pricing</a></li>
-                    <li><a id="contact-modal" onclick="Modal()">Contact</a></li>
+                    <li><a id="contact-modal" onclick="openModal()">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -140,10 +140,8 @@
             </section>
 
             <section>
-                <div id="map"></div>
-                <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-                async>
-                </script>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d901.0579839376613!2d-51.470635070834916!3d-25.3970457874906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef362dab952f4b%3A0x8b4685920af90ff9!2sR.%20XV%20de%20Novembro%2C%208065%20-%20Centro%2C%20Guarapuava%20-%20PR%2C%2085010-000!5e0!3m2!1spt-BR!2sbr!4v1630496349490!5m2!1spt-BR!2sbr" 
+                class="map" allowfullscreen="" loading="lazy"></iframe>
             </section>
 
             <section>
@@ -200,7 +198,7 @@
                     <label>E-mail:</label>
                     <input type="email" name="email" id="email" size="40" maxlength="40" title="Digite seu e-mail" required />
                     <label>Assunto:</label>
-                    <select id="subject">
+                    <select id="subject" required>
                         <option value="" selected disabled>Selecione...</option>
                         <option value="php">Quero aprender PHP</option>
                         <option value="download">Quais ferramentas baixar?</option>
@@ -226,8 +224,8 @@
                     <input type="text" name="number" id="number" size="10" maxlength="5" required />
                 </form>
                 <div class="button">
-                    <button class="btn" type="submit" onclick="Cancel()">Concluído</button> <!-- Função Cancel provisório, como não envia dados, só para fechar a tela modal -->
-                    <button id="cancel" class="btn" onclick="Cancel()">Cancelar</button>
+                    <button class="btn" type="submit" onclick="closeModal()">Concluído</button> <!-- Função Cancel provisório, como não envia dados, só para fechar a tela modal -->
+                    <button id="cancel" class="btn" onclick="closeModal()">Cancelar</button>
                 </div>
 
                 </form>

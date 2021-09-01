@@ -76,9 +76,12 @@ textarea {
     background-color: #3d3d9b;
 }
 /* -------------------------------- map --------------------------------------------- */
-#map {
+.map {
     width: 100%;
-    height: 300px;
+    height: 400px;
+    border: none;
+    border-top: 1px solid #66f;
+    border-bottom: 1px solid #66f;
 }
 
 /* -------------------------------- nav --------------------------------------------- */
@@ -124,7 +127,7 @@ nav ul, nav ul li {
     list-style: none;
 }
 
-.items-mobile {
+.items-mobile, .menu {
     display: none;
 }
 
@@ -146,10 +149,6 @@ nav a:hover {
     margin: 0px 15px;
     border: none;
     cursor: pointer;
-}
-
-.menu {
-    display: none;
 }
 
 /* -------------------------------- container --------------------------------------------- */

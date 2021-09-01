@@ -32,25 +32,15 @@ function Menu() {
     nav.classList.toggle('active')
 }
 //-------------------------------------------------------------
-function Modal() {
+function openModal() {
     const modalcontact = document.getElementById('modal-screen-contact')
     modal = modalcontact.classList.add('active')
 }
 
 //-------------------------------------------------------------
-function Cancel(){
+function closeModal(){
     const modalcontact = document.getElementById('modal-screen-contact')
     modal = modalcontact.classList.remove('active')
-}
-
-//-------------------------------------------------------------
-let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -25.396934943939826, lng: -51.470080032047925 },
-    zoom: 10,
-  });
 }
 
 //-------------------------------------------------------------
