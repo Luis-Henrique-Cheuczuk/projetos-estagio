@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 require 'Models/Model.php';
 
 class User extends Model
