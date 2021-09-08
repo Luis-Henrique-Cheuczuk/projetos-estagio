@@ -7,7 +7,6 @@ require 'Models/User.php';
    $users = $uUser->loans();
    echo $users;
 
-    
     //Dados do banco
    /*  $data = [
         'email' => 'teste2@gmail.com',
@@ -37,7 +36,6 @@ require 'Models/User.php';
     /* $book = $books->loans();
     echo $book; */
 
-    
     //Criando/alterando no banco
 
     /* $data = [
@@ -67,7 +65,6 @@ require 'Models/User.php';
     /* $loan = $loans->loanOneToOne();
     echo $loan;  */
 
-    
     //Criando/alterando no banco
 
     /* $data = [
@@ -79,7 +76,6 @@ require 'Models/User.php';
 
     //Criar no banco
     /* $loan = $loans->create($data);  */
-
 
     /*//Update no banco
     $loan = $loans->update(2, $data);*/
