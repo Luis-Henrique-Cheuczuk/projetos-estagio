@@ -26,6 +26,21 @@ abstract class Model
         $this->table = $table;
     }
 
+    private function desconnect()
+    {
+        pg_close($this->connection);
+    }
+
+    public function find(int $id) 
+    {
+        $this->connect();
+        $this->tableId = $id;
+        $result = pg_query($this->connection, "select * from $this->table where id = $id");
+        $this->desconnect();
+
+        return json_encode(pg_fetch_all($result)[0]);
+    }
+
     public function all()
     {
         $this->connect();
@@ -53,21 +68,23 @@ abstract class Model
         $result = pg_delete($this->connection, $this->table, ['id' => $id]);
     }
 
-    public function oneToOne(string $table, string $foreignKey)
+    public function oneToOne(string $table, string $foreignKey, string $key = 'id')
     {
         $this->connect();
         $result = pg_query(
-            $this->connection, 
-            "select $table.* from $table inner join $this->table on $this->table.id = $table.$foreignKey");
+            $this->connection,
+            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey" 
+        );
         return json_encode(pg_fetch_all($result)[0]);
     }
 
-    public function oneToMany(string $table, string $foreignKey, string $primaryKey)
+    public function oneToMany(string $table, string $foreignKey, string $key = 'id')
     {
         $this->connect();
         $result = pg_query(
-            $this->connection, 
-            "select $table.* from $table inner join $this->table on $this->table.id = $table.$foreignKey");
+            $this->connection,
+            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey where $this->table.$key = $this->tableId"
+        );
         return json_encode(pg_fetch_all($result));
     }
 }
