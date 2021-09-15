@@ -148,7 +148,7 @@
     ?>
 
     <?php
-        include("../layout/modalAttStatusBook.php");
+        include("../layout/modalAttStatusBookAdmin.php");
     ?>
 
     <?php
