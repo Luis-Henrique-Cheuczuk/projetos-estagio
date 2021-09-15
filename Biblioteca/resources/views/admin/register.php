@@ -10,9 +10,15 @@
 
 <body>
 
-                <?php
+<?php
                     include("../layout/nav.php");
                 ?>
+                <ul class="items">
+                    <li><a href="./homePage.php">Home</a></li>
+                    <li><a onclick="openModalAddBook()">Adicionar livro</a></li>
+                    <li><a href="./register.php">Cadastrar usuário/admin</a></li>
+                    <li><a href="../login.php">Sair</a></li>
+                </ul>
             </div>
         </nav>
     </section>
@@ -22,7 +28,7 @@
             <fieldset>
                 <form method="POST" action="#">
                     <div class="input-login">
-                        <h1>Faça seu cadastro </h1>
+                        <h1>Cadastre usuário ou admin </h1>
                         <div class="campos">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" title="Digite seu e-mail" size="30" required autofocus />
@@ -43,6 +49,18 @@
                             <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="11" required />
                         </div>
 
+                        <div class="campos">
+                            <label>Tipo da conta</label>
+                            <div class="type-user">
+                                <input type="radio" name="typeUser" id="typeUser" required />
+                                <label> Usuário normal</label>
+                            </div>
+                            <div class="type-user">
+                                <input type="radio" name="typeUser" id="typeAdmin" required />
+                                <label> Usuário Admin</label>
+                            </div>
+                        </div>
+
                         <div class="btn-options">
                             <button class="btn-concluded" type="submit" >Concluido</button>
                         </div>
@@ -51,5 +69,16 @@
             </fieldset>
         </div>
     </section>
+
+    <?php
+        include("../layout/footer.php");
+    ?>
+
+    <?php
+        include("../layout/modalAddBook.php");
+    ?>
+
+    <script src="../../public/js/script.js"></script>
+
 </body>
 </html>

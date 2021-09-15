@@ -5,7 +5,7 @@
         include("../layout/head.php");
     ?> 
     
-    <title>Cadastro</title>
+    <title>Atualizar Dados</title>
 </head>
 
 <body>
@@ -13,6 +13,13 @@
                 <?php
                     include("../layout/nav.php");
                 ?>
+                <ul class="items">
+                    <li><a href="./homePage.php">Home</a></li>
+                    <li><a href="./loans.php">Empréstimos</a></li>
+                    <li><a href="./historic.php">Histórico</a></li>
+                    <li><a href="./dataUser.php">Dados</a></li>
+                    <li><a href="../login.php">Sair</a></li>
+                </ul>
             </div>
         </nav>
     </section>
@@ -22,7 +29,7 @@
             <fieldset>
                 <form method="POST" action="#">
                     <div class="input-login">
-                        <h1>Faça seu cadastro </h1>
+                        <h1>Seus dados</h1>
                         <div class="campos">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" title="Digite seu e-mail" size="30" required autofocus />
@@ -51,5 +58,10 @@
             </fieldset>
         </div>
     </section>
+
+    <?php
+        include("../layout/footer.php");
+    ?>
+    
 </body>
 </html>

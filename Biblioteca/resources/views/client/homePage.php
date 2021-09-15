@@ -14,16 +14,14 @@
                 ?>
                 <ul class="items">
                     <li><a href="./homePage.php">Home</a></li>
-                    <li><a href="">Empréstimos</a></li>
-                    <li><a href="">Histórico</a></li>
-                    <li><a href="">Dados</a></li>
+                    <li><a href="./loans.php">Empréstimos</a></li>
+                    <li><a href="./historic.php">Histórico</a></li>
+                    <li><a href="./dataUser.php">Dados</a></li>
                     <li><a href="../login.php">Sair</a></li>
                 </ul>
             </div>
         </nav>
     </section>
-
-    <hr>
 
     <section>
         <div class="container">
@@ -44,7 +42,7 @@
                         <div class="description-book">
                             Descrição livro 1
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -58,7 +56,7 @@
                         <div class="description-book">
                             Descrição livro 2
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -72,7 +70,7 @@
                         <div class="description-book">
                             Descrição livro 3
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -86,7 +84,7 @@
                         <div class="description-book">
                             Descrição livro 4
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -106,7 +104,7 @@
                         <div class="description-book">
                             Descrição livro 1
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -120,7 +118,7 @@
                         <div class="description-book">
                             Descrição livro 2
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -134,7 +132,7 @@
                         <div class="description-book">
                             Descrição livro 3
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -148,7 +146,7 @@
                         <div class="description-book">
                             Descrição livro 4
                         </div>
-                        <div class="btn-register">
+                        <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
@@ -286,7 +284,7 @@
     ?>
 
     <section>
-        <div id="modal-screen-book" class="modal-screen">
+        <div id="modal-screen" class="modal-screen">
             <div class="modal-book">
                 <h3>Título do Livro</h3>
                 <form method="post" action="#">
@@ -299,12 +297,9 @@
                         </div>
                     </div>
                 </form>
-                <div class="btn-register">
-                    <button class="btn-info-book" type="submit" onclick="closeModal()">Emprestar</button> <!-- Função Cancel provisório, como não envia dados, só para fechar a tela modal -->
+                <div class="btn-options">
                     <button id="cancel" class="btn-info-book" onclick="closeModal()">Cancelar</button>
                 </div>
-
-                </form>
             </div>
         </div>
     </section>

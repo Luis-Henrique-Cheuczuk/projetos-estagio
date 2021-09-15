@@ -13,9 +13,17 @@ a {
     cursor: pointer;
 }
 
-.items li a, fieldset, .btn-screen-login, .btn-loan-book, .btn-info-book{
+.items li a, fieldset, .btn-concluded, .btn-register, .btn-options, .btn-loan-book, .btn-info-book{
     border-radius: 5px;
 }
+
+textarea {
+    resize: none;
+    outline: none;
+    padding: 5px;
+}
+
+/* ---------------------------------------- User ---------------------------------------- */
 
 /* -------------------- nav -------------------- */
 .nav {
@@ -65,7 +73,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* -------------------- container -------------------- */
+/* -------------------- container/login -------------------- */
 .container {
     width: 100%;
     display: grid;
@@ -84,7 +92,7 @@ nav a:hover {
 
 .campos {
     display: grid;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 input {
@@ -94,20 +102,22 @@ input {
     border-bottom: 1px solid #aaa;
 }
 
-.btn-register {
+.btn-options {
     display: flex;
     justify-content: center;
     margin: 15px 0px;
 }
 
-.btn-screen-login, .btn-loan-book, .btn-info-book {
+.btn-concluded, .btn-register, .btn-loan-book, .btn-info-book {
+    background-color: #001f45;
+    color: #fff;
     border: none;
     padding: 7px;
     margin: 0px 10px;
     cursor: pointer;
 }
 
-.btn-screen-login:hover {
+.btn-concluded:hover, .btn-register:hover {
     background-color: #0087b1; 
     color: #fff;
 }
@@ -131,7 +141,8 @@ input {
 }
 
 .books {
-    padding: 20px;
+    padding: 15px;
+    text-align: center;
     /* border: 1px solid #000; */
 }
 
@@ -145,11 +156,6 @@ input {
     font-family: 'Crimson Text', serif;
 }
 
-.btn-loan-book, .btn-info-book {
-    background-color: #001f45;
-    color: #fff;
-}
-
 .btn-loan-book:hover, .btn-info-book:hover {
     background-color: #0087b1; 
 }
@@ -159,6 +165,7 @@ input {
 .footer {
     display: grid;
     background-color: #001f45;
+    margin-top: 20px;
 }
 
 .title-footer h1{
@@ -210,4 +217,25 @@ input {
     font-size: 30px;
     background-color: #001f45;
     border: 1px solid #000;
+}
+
+
+/* ---------------------------------------- Admin ---------------------------------------- */
+.campos #typeUser, .campo #typeAdmin, .campos #yes, .campos #no {
+    margin: 15px 0px;
+}
+
+.devolution label {
+    margin-right: 20px;
+}
+
+/* -------------------- Modal -------------------- */
+
+.date-book {
+    padding: 20px;
+}
+
+.date-book input {
+    margin-left: 10px;
+    padding-left: 10px;
 }

@@ -33,10 +33,10 @@
                             <input type="password" name="password" id="password" title="Digite sua senha" size="30" required />
                         </div>
 
-                        <div class="btn-register">
-                            <a class="btn-screen-login" href="/resources/views/client/homePage.php">Entrar</a>
-                            <!-- <button class="btn-screen-login" type="submit" >Entrar</button> -->
-                            <a class="btn-screen-login" href="/resources/views/client/register.php">Registre-se</a>
+                        <div class="btn-options">
+                            <a class="btn-concluded" href="/resources/views/admin/homePage.php">Entrar</a>
+                            <!-- <button class="btn-concluded" type="submit" >Entrar</button> -->
+                            <a class="btn-register" href="/resources/views/client/register.php">Registre-se</a>
                         </div>
                     </div>
                 </form>
