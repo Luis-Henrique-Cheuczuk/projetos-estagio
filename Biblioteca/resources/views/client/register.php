@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
     <?php
-        include("../layout/head.php");
+        include("./resources/views/layout/head.php");
     ?> 
     
     <title>Cadastro</title>
@@ -11,7 +11,7 @@
 <body>
 
                 <?php
-                    include("../layout/nav.php");
+                    include("./resources/views/layout/nav.php");
                 ?>
             </div>
         </nav>

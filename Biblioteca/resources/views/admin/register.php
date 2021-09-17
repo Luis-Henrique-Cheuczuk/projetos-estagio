@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
     <?php
-        include("../layout/head.php");
+        include("./resources/views/layout/head.php");
     ?> 
     
     <title>Cadastro</title>
@@ -11,13 +11,13 @@
 <body>
 
 <?php
-                    include("../layout/nav.php");
+                    include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="./homePage.php">Home</a></li>
+                    <li><a href="/home_admin">Home</a></li>
                     <li><a onclick="openModalAddBook()">Adicionar livro</a></li>
-                    <li><a href="./register.php">Cadastrar usuário/admin</a></li>
-                    <li><a href="../login.php">Sair</a></li>
+                    <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
+                    <li><a href="./resources/views/login.php">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -71,14 +71,14 @@
     </section>
 
     <?php
-        include("../layout/footer.php");
+        include("./resources/views/layout/footer.php");
     ?>
 
     <?php
-        include("../layout/modalAddBook.php");
+        include("./resources/views/layout/modalAddBook.php");
     ?>
 
-    <script src="../../public/js/script.js"></script>
+    <script src="./resources/public/js/script.js"></script>
 
 </body>
 </html>

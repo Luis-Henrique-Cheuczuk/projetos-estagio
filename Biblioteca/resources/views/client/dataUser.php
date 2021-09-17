@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
     <?php
-        include("../layout/head.php");
+        include("./resources/views/layout/head.php");
     ?> 
     
     <title>Atualizar Dados</title>
@@ -11,14 +11,14 @@
 <body>
 
                 <?php
-                    include("../layout/nav.php");
+                    include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="./homePage.php">Home</a></li>
-                    <li><a href="./loans.php">Empréstimos</a></li>
-                    <li><a href="./historic.php">Histórico</a></li>
-                    <li><a href="./dataUser.php">Dados</a></li>
-                    <li><a href="../login.php">Sair</a></li>
+                    <li><a href="/home_user">Home</a></li>
+                    <li><a href="/loans">Empréstimos</a></li>
+                    <li><a href="/historic">Histórico</a></li>
+                    <li><a href="/data_user">Dados</a></li>
+                    <li><a href="/resources/views/login.php">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -60,7 +60,7 @@
     </section>
 
     <?php
-        include("../layout/footer.php");
+        include("./resources/views/layout/footer.php");
     ?>
     
 </body>

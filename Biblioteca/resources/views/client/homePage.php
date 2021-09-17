@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
     <?php
-        include("../layout/head.php");
+        include("./resources/views//layout/head.php");
     ?>
     
     <title>Home Page</title>
@@ -10,14 +10,14 @@
 <body>
     
                 <?php
-                    include("../layout/nav.php");
+                    include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="./homePage.php">Home</a></li>
-                    <li><a href="./loans.php">Empréstimos</a></li>
-                    <li><a href="./historic.php">Histórico</a></li>
-                    <li><a href="./dataUser.php">Dados</a></li>
-                    <li><a href="../login.php">Sair</a></li>
+                    <li><a href="/home_user">Home</a></li>
+                    <li><a href="loans">Empréstimos</a></li>
+                    <li><a href="/historic">Histórico</a></li>
+                    <li><a href="/data_user">Dados</a></li>
+                    <li><a href="/resources/views/login.php">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -34,26 +34,40 @@
                     <h1>Ficção Científica</h1>
                 </div>
                 <div class="type-books">
-                    <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                    <?php
+                        $books = [
+                            [
+                                'name' => 'Teste 1',
+                                'description' => 'Descrição',
+                                'author' => 'Eu'
+                            ]
+                        ];
+                        foreach($books as $book){
+
+                    ?>
+                    <div class="books" >
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
-                            <b>Titulo</b>
+                            <b>
+                                <?php echo $book['name'] ?>
+                            </b>
                         </div>
-                        <div class="description-book">
-                            Descrição livro 1
+                        <div class="author-book">
+                        <?php echo $book['author'] ?>
                         </div>
                         <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
                     </div>
+                    <?php } ?>
 
-                    <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                    <!-- <div class="books">
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo2</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 2
                         </div>
                         <div class="btn-options">
@@ -63,11 +77,11 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo3</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 3
                         </div>
                         <div class="btn-options">
@@ -77,31 +91,31 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo4</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 4
                         </div>
                         <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
                             <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
 
-                <div class="title-type-books">
+                <!-- <div class="title-type-books">
                     <h1>Ação</h1>
                 </div>
                 <div class="type-books">
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 1
                         </div>
                         <div class="btn-options">
@@ -111,11 +125,11 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo2</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 2
                         </div>
                         <div class="btn-options">
@@ -125,11 +139,11 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo3</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 3
                         </div>
                         <div class="btn-options">
@@ -139,11 +153,11 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo4</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 4
                         </div>
                         <div class="btn-options">
@@ -152,18 +166,18 @@
                         </div>
                     </div>
                 </div>
-
+ -->
 
 <!--                 <div class="title-type-books">
                         <h1>Romance</h1>
                 </div>
                 <div class="type-books">
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo</b>
                         </div>
-                        <div class="description-book">
+                        <div class="author-book">
                             Descrição livro 1
                         </div>
                         <div class="btn-register">
@@ -173,11 +187,11 @@
                     </div>
 
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo2</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 2
                             </div>
                             <div class="btn-register">
@@ -187,11 +201,11 @@
                         </div>
 
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo3</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 3
                             </div>
                             <div class="btn-register">
@@ -201,11 +215,11 @@
                         </div>
 
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo4</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 4
                             </div>
                             <div class="btn-register">
@@ -220,11 +234,11 @@
                     </div>
                     <div class="type-books">
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 1
                             </div>
                             <div class="btn-register">
@@ -234,11 +248,11 @@
                         </div>
 
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo2</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 2
                             </div>
                             <div class="btn-register">
@@ -248,11 +262,11 @@
                         </div>
 
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo3</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 3
                             </div>
                             <div class="btn-register">
@@ -261,11 +275,11 @@
                             </div>
                         </div>
                         <div class="books">
-                            <img class="img-book" src="../../public/img/book.png" />
+                            <img class="img-book" src="/resources/public/img/book.png" />
                             <div class="title-book">
                                 <b>Titulo4</b>
                             </div>
-                            <div class="description-book">
+                            <div class="author-book">
                                 Descrição livro 4
                             </div>
                             <div class="btn-register">
@@ -280,13 +294,13 @@
     </section>
 
     <?php
-        include("../layout/footer.php");
+        include("./resources/views/layout/footer.php");
     ?>
 
     <?php
-        include("../layout/modalInfoBook.php");
+        include("./resources/views/layout/modalInfoBook.php");
     ?>
 
-    <script src="../../public/js/script.js"></script>
+    <script src="./resources/public/js/script.js"></script>
 </body>
 </html>

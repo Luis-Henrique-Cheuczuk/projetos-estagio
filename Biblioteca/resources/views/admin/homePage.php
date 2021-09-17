@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
     <?php
-        include("../layout/head.php");
+        include("./resources/views/layout/head.php");
     ?>
     
     <title>Home Page Admin</title>
@@ -10,13 +10,13 @@
 <body>
     
                 <?php
-                    include("../layout/nav.php");
+                    include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="./homePage.php">Home</a></li>
+                    <li><a href="/home_admin">Home</a></li>
                     <li><a onclick="openModalAddBook()">Adicionar livro</a></li>
-                    <li><a href="./register.php">Cadastrar usuário/admin</a></li>
-                    <li><a href="../login.php">Sair</a></li>
+                    <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
+                    <li><a href="./resources/views/login.php">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="type-books">
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo</b>
                         </div>
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo2</b>
                         </div>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo3</b>
                         </div>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo4</b>
                         </div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="type-books">
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo</b>
                         </div>
@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo2</b>
                         </div>
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo3</b>
                         </div>
@@ -127,7 +127,7 @@
                     </div>
 
                     <div class="books">
-                        <img class="img-book" src="../../public/img/book.png" />
+                        <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>Titulo4</b>
                         </div>
@@ -144,17 +144,17 @@
     </section>
 
     <?php
-        include("../layout/footer.php");
+        include("./resources/views/layout/footer.php");
     ?>
 
     <?php
-        include("../layout/modalAttStatusBookAdmin.php");
+        include("./resources/views/layout/modalAttStatusBookAdmin.php");
     ?>
 
     <?php
-        include("../layout/modalAddBook.php");
+        include("./resources/views/layout/modalAddBook.php");
     ?>
 
-    <script src="../../public/js/script.js"></script>
+    <script src="./resources/public/js/script.js"></script>
 </body>
 </html>

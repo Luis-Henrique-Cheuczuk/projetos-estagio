@@ -1,3 +1,3 @@
 <?php
 
-require('resources/views/login.php');
+require('routes.php');

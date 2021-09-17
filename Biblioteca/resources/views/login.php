@@ -34,9 +34,10 @@
                         </div>
 
                         <div class="btn-options">
-                            <a class="btn-concluded" href="/resources/views/admin/homePage.php">Entrar</a>
+                            <a class="btn-concluded" href="/home_admin">Entrar Admin</a>
+                            <a class="btn-concluded" href="/home_user">Entrar User</a>
                             <!-- <button class="btn-concluded" type="submit" >Entrar</button> -->
-                            <a class="btn-register" href="/resources/views/client/register.php">Registre-se</a>
+                            <a class="btn-register" href="/register">Registre-se</a>
                         </div>
                     </div>
                 </form>

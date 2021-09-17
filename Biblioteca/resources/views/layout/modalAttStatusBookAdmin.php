@@ -10,7 +10,7 @@
                         </div>
                         <div class="campos">
                             <label>Devolver? </label>
-                            <div class="devolution">
+                            <div class="devolution" id="devolution">
                                 <input type="radio" name="devolution" id="yes" required />
                                 <label> Sim </label>
                                 <input type="radio" name="devolution" id="no" required />
@@ -19,11 +19,11 @@
                         </div>
                         <div class="date-book">
                             <label for="date_start">Data da locação: </label>
-                            <input type="date" id="date_start" />
+                            <input type="date" id="date_start" disabled/>
                         </div>
                         <div class="date-book">
                             <label for="date_end">Data da entrega: </label>
-                            <input type="date" id="date_end" />
+                            <input type="date" id="date_end" disabled/>
                         </div>
                     </div>
                 </form>
