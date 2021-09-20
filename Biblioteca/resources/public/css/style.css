@@ -128,12 +128,17 @@ input {
 }
 
 .type-books {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* grid-template-columns: 2fr 2fr 2fr 2fr; */
     /* border: 1px solid #000; */
 }
 
 .title-type-books {
+    display: flex;
+    justify-content: start;
     font-family: 'Crimson Text', serif;
     font-size: 25px;
     padding: 10px;

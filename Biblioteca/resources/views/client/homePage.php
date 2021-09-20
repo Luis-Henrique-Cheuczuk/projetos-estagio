@@ -30,24 +30,27 @@
                 <button type="submit">&#128269;</button><!-- Botão com ícone de pesquisa -->
             </div>
             <div class="section-books">
-                <div class="title-type-books">
-                    <h1>Ficção Científica</h1>
-                </div>
                 <div class="type-books">
-                    <?php
-                        
-                        foreach($books as $book){
-
-                    ?>
+                <?php
+                    foreach($books as $book){     
+                ?>
+                    <!-- <h1>Titulo do Livro: <?= $book['name'] ?></h1> -->
+                    <!-- <h1>Autor: <?= $book['author'] ?></h1> -->
+                    <!-- <h1>Categoria: <?= $book['category'] ?></h1> -->
+                    <!-- <h1>Quantidade: <?= $book['quantity'] ?></h1> -->
+                    <!-- <h1>Descrição: <?= $book['description'] ?></h1> -->
+                    <!-- <h1>Status: <?= $book['status'] ?></h1> -->
+                    
                     <div class="books" >
+                    <div class="title-type-books">
+                        <h1><?= $book['category'] ?></h1>
+                    </div>
                         <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
-                            <b>
-                                <?php echo $book ?>
-                            </b>
+                            <p><?= $book['name'] ?></p>
                         </div>
                         <div class="author-book">
-                        <?php echo $book['author'] ?>
+                            <p><?= $book['author'] ?></p>
                         </div>
                         <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
@@ -55,234 +58,6 @@
                         </div>
                     </div>
                     <?php } ?>
-
-                    <!-- <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo2</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 2
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo3</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 3
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo4</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 4
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div> -->
-                </div>
-
-
-                <!-- <div class="title-type-books">
-                    <h1>Ação</h1>
-                </div>
-                <div class="type-books">
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 1
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo2</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 2
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo3</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 3
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo4</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 4
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
-                    </div>
-                </div>
- -->
-
-<!--                 <div class="title-type-books">
-                        <h1>Romance</h1>
-                </div>
-                <div class="type-books">
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo</b>
-                        </div>
-                        <div class="author-book">
-                            Descrição livro 1
-                        </div>
-                        <div class="btn-register">
-                            <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" href="">Informações</a>
-                        </div>
-                    </div>
-
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo2</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 2
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo3</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 3
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo4</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 4
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="title-type-books">
-                        <h1>Aventura</h1>
-                    </div>
-                    <div class="type-books">
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 1
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo2</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 2
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo3</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 3
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-                        <div class="books">
-                            <img class="img-book" src="/resources/public/img/book.png" />
-                            <div class="title-book">
-                                <b>Titulo4</b>
-                            </div>
-                            <div class="author-book">
-                                Descrição livro 4
-                            </div>
-                            <div class="btn-register">
-                                <a class="btn-loan-book" href="">Emprestar</a>
-                                <a class="btn-info-book" href="">Informações</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -290,7 +65,7 @@
     <?php
         include("./resources/views/layout/footer.php");
     ?>
-
+        
     <?php
         include("./resources/views/layout/modalInfoBook.php");
     ?>

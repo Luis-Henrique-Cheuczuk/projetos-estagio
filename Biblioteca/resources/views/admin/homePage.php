@@ -24,121 +24,34 @@
 
     <section>
         <div class="container">
-            <div class="section-books">
-                <div class="title-type-books">
-                    <h1>Ficção Científica</h1>
-                </div>
+        <div class="section-books">
                 <div class="type-books">
-                    <div class="books">
+                <?php
+                    foreach($books as $book){     
+                ?>
+                    <!-- <h1>Titulo do Livro: <?= $book['name'] ?></h1> -->
+                    <!-- <h1>Autor: <?= $book['author'] ?></h1> -->
+                    <!-- <h1>Categoria: <?= $book['category'] ?></h1> -->
+                    <!-- <h1>Quantidade: <?= $book['quantity'] ?></h1> -->
+                    <!-- <h1>Descrição: <?= $book['description'] ?></h1> -->
+                    <!-- <h1>Status: <?= $book['status'] ?></h1> -->
+                    
+                    <div class="books" >
+                    <div class="title-type-books">
+                        <h1><?= $book['category'] ?></h1>
+                    </div>
                         <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
-                            <b>Titulo</b>
+                            <p><?= $book['name'] ?></p>
                         </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo2</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
+                        <div class="author-book">
+                            <p><?= $book['author'] ?></p>
                         </div>
                         <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
+                        <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
                         </div>
                     </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo3</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo4</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="title-type-books">
-                    <h1>Ação</h1>
-                </div>
-                <div class="type-books">
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo2</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo3</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-
-                    <div class="books">
-                        <img class="img-book" src="/resources/public/img/book.png" />
-                        <div class="title-book">
-                            <b>Titulo4</b>
-                        </div>
-                        <div class="description-book">
-                            Nome do usuário que locou o livro
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a>
-                        </div>
-                    </div>
-                </div>
+                    <?php } ?>
             </div>
         </div>
     </section>

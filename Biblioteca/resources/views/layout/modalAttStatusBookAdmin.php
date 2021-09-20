@@ -1,7 +1,7 @@
 <section>
         <div id="modal-screen-info-book" class="modal-screen">
             <div class="modal-book">
-                <h3>Título do Livro</h3>
+                <h3><?= $book['id'] ?></h3>
                 <form method="post" action="#">
                     <div class="books">
                     <div class="campos">
