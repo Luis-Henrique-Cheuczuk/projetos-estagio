@@ -1,20 +1,26 @@
 <?php
     
+require './models/Book.php';
+
 class BookController
 {
+
+    public $book;
+
     public function index()
     {
-        //listar 
+        $books = (new Book())->all();
+        include './resources/views/client/homePage.php';
     }
 
-    public function show()
+    public function show(int $id)
     {
-        //visualizar item
+        $this->book = find($id);
     }
 
     public function create()
     {
-        //chamar tela de criação de livros
+        
     }
 
     public function store() 

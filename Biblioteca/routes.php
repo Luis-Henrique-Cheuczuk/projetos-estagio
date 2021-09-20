@@ -1,14 +1,16 @@
 <?php
 
 $request = $_SERVER['REQUEST_URI'];
+require __DIR__ . '/controller/admin/BookController.php';
 
 switch ($request) {
     case '/' :
-        require __DIR__ . '/resources/views/login.php';
+        /* require __DIR__ . '/resources/views/login.php'; */
+        
         break;
     //Routes Admin
     case '/home_admin' :
-        require __DIR__ . '/resources/views/admin/homePage.php';
+        (new BookController())->index();
         break;
     case '/register_adminUser' :
         require __DIR__ . '/resources/views/admin/register.php';

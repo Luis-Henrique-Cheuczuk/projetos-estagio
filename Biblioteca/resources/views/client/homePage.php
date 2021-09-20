@@ -35,13 +35,7 @@
                 </div>
                 <div class="type-books">
                     <?php
-                        $books = [
-                            [
-                                'name' => 'Teste 1',
-                                'description' => 'Descrição',
-                                'author' => 'Eu'
-                            ]
-                        ];
+                        
                         foreach($books as $book){
 
                     ?>
@@ -49,7 +43,7 @@
                         <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
                             <b>
-                                <?php echo $book['name'] ?>
+                                <?php echo $book ?>
                             </b>
                         </div>
                         <div class="author-book">

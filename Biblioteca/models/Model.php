@@ -41,11 +41,19 @@ abstract class Model
         return json_encode(pg_fetch_all($result)[0]);
     }
 
-    public function all()
+/*     public function all()
     {
         $this->connect();
         $result = pg_query($this->connection, "SELECT * FROM $this->table");
 
+        return json_encode(pg_fetch_all($result));
+    } */
+
+    public function all()
+    {
+        $this->connect();
+        $result = pg_query($this->connection, "SELECT * FROM $this->table");
+        $this->desconnect();
         return json_encode(pg_fetch_all($result));
     }
 
@@ -53,6 +61,7 @@ abstract class Model
     {
         $this->connect();
         $result = pg_insert($this->connection, $this->table, $data);
+        $this->desconnect();
         return $result;
     }
 
@@ -60,12 +69,14 @@ abstract class Model
     {
         $this->connect();
         $result = pg_update($this->connection, $this->table, $data, ['id' => $id]);
+        $this->desconnect();
     }
 
     public function delete(int $id) 
     {
         $this->connect();
         $result = pg_delete($this->connection, $this->table, ['id' => $id]);
+        $this->desconnect();
     }
 
     public function oneToOne(string $table, string $foreignKey, string $key = 'id')

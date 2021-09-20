@@ -1,6 +1,6 @@
 <?php 
 
-require 'Models/Model.php';
+require 'models/Model.php';
 
 class Book extends Model 
 {

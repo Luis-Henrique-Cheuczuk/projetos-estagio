@@ -1,6 +1,6 @@
 <?php 
 
-require 'Models/Model.php';
+require 'models/model.php';
 
 class Loan extends Model 
 {
