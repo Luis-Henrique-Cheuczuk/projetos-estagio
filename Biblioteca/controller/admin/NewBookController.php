@@ -1,31 +1,34 @@
 <?php
-    
-require './models/Book.php';
 
-class BookController
+
+require_once './models/User.php';
+
+class NewBookController
 {
 
-    public $book;
+    public $new_book;
 
     public function index()
     {
-        $books = (new Book())->all();
-        include './resources/views/client/homePage.php';
+        $new_books = (new Book())->all();
+        include './resources/views/admin/newBook.php';
     }
 
     public function show(int $id)
     {
-        $this->book = find($id);
+        $this->new_book = find($id);
     }
 
     public function create()
     {
-        
+
     }
 
-    public function store() 
+    public function store()
     {
         //ação de criar livros
+        $books = (new Book())->create();
+        include './resources/views/client/homePage.php';
     }
 
     public function edit()

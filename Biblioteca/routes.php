@@ -1,38 +1,53 @@
 <?php
 
 $request = $_SERVER['REQUEST_URI'];
-require __DIR__ . '/controller/admin/BookController.php';
+require __DIR__ . '/controller/LoginController.php';
+require  __DIR__ . '/controller/RegisterController.php';
+
+require __DIR__ . '/controller/admin/BookControllerAdmin.php';
+require __DIR__ . '/controller/admin/NewBookController.php';
+require __DIR__ . '/controller/admin/NewAdminClientController.php';
+
+require __DIR__ . '/controller/client/BookControllerClient.php';
+require __DIR__ . '/controller/client/LoanController.php';
+require __DIR__ . '/controller/client/HistoricController.php';
+require __DIR__ . '/controller/client/DataUserController.php';
 
 switch ($request) {
+    //Tela login
     case '/' :
-        /* require __DIR__ . '/resources/views/login.php'; */
-        
-        break;
-    //Routes Admin
-    case '/home_admin' :
-        (new BookController())->index();
-        break;
-    case '/register_adminUser' :
-        require __DIR__ . '/resources/views/admin/register.php';
+        (new LoginController())->index();
         break;
 
     //Register
     case '/register' :
-        require __DIR__ . '/resources/views/client/register.php';
+        (new RegisterController())->index();
+        break;
+
+
+    //Routes Admin
+    case '/home_admin' :
+        (new BookControllerAdmin())->index();
+        break;
+    case '/register_adminUser' :
+        (new NewAdminClientController())->index();
+        break;
+    case '/add_book' :
+        (new NewBookController())->index();
         break;
 
     //Routes User
     case '/home_user' :
-        require __DIR__ . '/resources/views/client/homePage.php';
+        (new BookControllerClient())->index();
         break;
     case '/loans' :
-        require __DIR__ . '/resources/views/client/loans.php';
+        (new LoanController())->index();
         break;
     case '/historic' :
-        require __DIR__ . '/resources/views/client/historic.php';
+        (new HistoricController())->index();
         break;
     case '/data_user' :
-        require __DIR__ . '/resources/views/client/dataUser.php';
+        (new DataUserController())->index();
         break;
     default:
         http_response_code(404);

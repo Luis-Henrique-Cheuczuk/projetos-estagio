@@ -14,7 +14,7 @@
                 ?>
                 <ul class="items">
                     <li><a href="/home_user">Home</a></li>
-                    <li><a href="loans">Empréstimos</a></li>
+                    <li><a href="/loans">Empréstimos</a></li>
                     <li><a href="/historic">Histórico</a></li>
                     <li><a href="/data_user">Dados</a></li>
                     <li><a href="/resources/views/login.php">Sair</a></li>
@@ -32,7 +32,8 @@
             <div class="section-books">
                 <div class="type-books">
                 <?php
-                    foreach($books as $book){     
+                    foreach($booksClient as $book){
+//                        foreach ($loans as $loan){
                 ?>
                     <!-- <h1>Titulo do Livro: <?= $book['name'] ?></h1> -->
                     <!-- <h1>Autor: <?= $book['author'] ?></h1> -->
@@ -45,19 +46,24 @@
                     <div class="title-type-books">
                         <h1><?= $book['category'] ?></h1>
                     </div>
+                        <hr>
                         <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
-                            <p><?= $book['name'] ?></p>
+                            <b><?= $book['name'] ?></b>
                         </div>
                         <div class="author-book">
-                            <p><?= $book['author'] ?></p>
+                            <b><?= $book['author'] ?></b>
+                        </div>
+                        <div class="description-book">
+                            <p><?= $book['description'] ?></p>
                         </div>
                         <div class="btn-options">
                             <a class="btn-loan-book" href="">Emprestar</a>
-                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>
-                        </div>
+                        <!-- <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a> -->
+                        </div> 
                     </div>
-                    <?php } ?>
+                    <?php
+                        }?>
             </div>
         </div>
     </section>

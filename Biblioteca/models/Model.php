@@ -35,26 +35,18 @@ abstract class Model
     {
         $this->connect();
         $this->tableId = $id;
-        $result = pg_query($this->connection, "select * from $this->table where id = $id");
+        $result = pg_query($this->connection, "select * from $this->table where id = $id ORDER BY id");
         $this->desconnect();
 
-        return json_encode(pg_fetch_all($result)[0]);
+        return (pg_fetch_all($result)[0]);
     }
-
-/*     public function all()
-    {
-        $this->connect();
-        $result = pg_query($this->connection, "SELECT * FROM $this->table");
-
-        return json_encode(pg_fetch_all($result));
-    } */
 
     public function all()
     {
         $this->connect();
-        $result = pg_query($this->connection, "SELECT * FROM $this->table");
+        $result = pg_query($this->connection, "SELECT * FROM $this->table ORDER BY id");
         $this->desconnect();
-        return json_encode(pg_fetch_all($result));
+        return (pg_fetch_all($result));
     }
 
     public function create(array $data)
@@ -84,9 +76,8 @@ abstract class Model
         $this->connect();
         $result = pg_query(
             $this->connection,
-            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey" 
-        );
-        return json_encode(pg_fetch_all($result)[0]);
+            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id");
+        return (pg_fetch_all($result)[0]);
     }
 
     public function oneToMany(string $table, string $foreignKey, string $key = 'id')
@@ -94,8 +85,7 @@ abstract class Model
         $this->connect();
         $result = pg_query(
             $this->connection,
-            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey where $this->table.$key = $this->tableId"
-        );
-        return json_encode(pg_fetch_all($result));
+            "select $table.* from $table inner join $this->table on $this->table.$key = $table.$foreignKey ORDER BY id");
+        return (pg_fetch_all($result));
     }
 }

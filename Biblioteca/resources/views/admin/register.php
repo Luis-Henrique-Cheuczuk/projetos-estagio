@@ -15,7 +15,7 @@
                 ?>
                 <ul class="items">
                     <li><a href="/home_admin">Home</a></li>
-                    <li><a onclick="openModalAddBook()">Adicionar livro</a></li>
+                    <li><a href="/add_book">Adicionar livro</a></li>
                     <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
                     <li><a href="./resources/views/login.php">Sair</a></li>
                 </ul>
@@ -72,10 +72,6 @@
 
     <?php
         include("./resources/views/layout/footer.php");
-    ?>
-
-    <?php
-        include("./resources/views/layout/modalAddBook.php");
     ?>
 
     <script src="./resources/public/js/script.js"></script>
