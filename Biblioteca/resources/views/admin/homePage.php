@@ -49,12 +49,20 @@
                         <div class="title-book">
                             <b><?= $book['status'] ?></b>
                         </div>
-                        <form method="post" action="/edit_book">
-                            <div class="btn-options">
-                                <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
-                                <button type="submit" class="btn-info-book" id="info-book-modal">Atualizar informações </button>
-                            </div>
-                        </form>
+                        <div class="btn">
+                            <form method="post" action="/edit_book">
+                                <div class="btn-options">
+                                    <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
+                                    <button type="submit" class="btn-info-book" id="info-book-modal">Atualizar livro </button>
+                                </div>
+                            </form>
+                            <form method="post" action="/delete_book">
+                                <div class="btn-options">
+                                    <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
+                                    <button type="submit" class="btn-info-book" id="info-book-modal">Excluir livro </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 <?php } ?>
             </div>

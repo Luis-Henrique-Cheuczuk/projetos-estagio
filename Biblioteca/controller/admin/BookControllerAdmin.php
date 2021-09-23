@@ -64,6 +64,7 @@ class BookControllerAdmin
     public function delete()
     {
         //ação de deletar o livro
+        $this->book->delete($this->id);
     }
 
 }

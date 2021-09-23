@@ -106,9 +106,7 @@ input {
 }
 
 .btn-options {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0px;
+    margin: 10px 0px;
 }
 
 .btn-concluded, .btn-register, .btn-loan-book, .btn-info-book {
@@ -174,6 +172,10 @@ input {
 #status {
     margin: 10px 0px;
     padding: 10px;
+}
+
+.btn {
+    display: flex;
 }
 
 /* -------------------- footer -------------------- */

@@ -43,6 +43,10 @@ switch ($request) {
         (new BookControllerAdmin())->store();
         header("Location: /home_admin");
         break;
+    case '/delete_book' :
+        (new BookControllerAdmin())->delete();
+        header("Location: /home_admin");
+        break;
 
     case '/register_adminUser' :
         (new NewAdminClientController())->create();
