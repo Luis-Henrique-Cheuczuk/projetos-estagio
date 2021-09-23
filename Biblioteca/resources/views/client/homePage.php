@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
     <?php
-        include("./resources/views//layout/head.php");
+        include("./resources/views/layout/head.php");
     ?>
     
     <title>Home Page</title>
@@ -17,7 +17,7 @@
                     <li><a href="/loans">Empréstimos</a></li>
                     <li><a href="/historic">Histórico</a></li>
                     <li><a href="/data_user">Dados</a></li>
-                    <li><a href="/resources/views/login.php">Sair</a></li>
+                    <li><a href="/">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,9 +43,9 @@
                     <!-- <h1>Status: <?= $book['status'] ?></h1> -->
                     
                     <div class="books" >
-                    <div class="title-type-books">
-                        <h1><?= $book['category'] ?></h1>
-                    </div>
+                        <div class="title-type-books">
+                            <h1><?= $book['category'] ?></h1>
+                        </div>
                         <hr>
                         <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">

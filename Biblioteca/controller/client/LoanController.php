@@ -6,10 +6,16 @@ class LoanController
 {
 
     public $loan;
+    protected $id;
+
+    public function __construct()
+    {
+        $this->loan = new Loan();
+    }
 
     public function index()
     {
-        $loans = (new Loan())->all();
+        $loans = $this->loan->all();
         include './resources/views/client/loans.php';
     }
 

@@ -23,6 +23,10 @@ textarea {
     padding: 5px;
 }
 
+input, textarea, select {
+    color: #333;
+}
+
 /* ---------------------------------------- User ---------------------------------------- */
 
 /* -------------------- nav -------------------- */
@@ -30,7 +34,6 @@ textarea {
     width: 100%;
     display: flex;
     position: fixed;
-    width: 100vw;
     justify-content: space-between;
     align-items: center;
     background-color: #001f45;
@@ -128,11 +131,11 @@ input {
 }
 
 .type-books {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* grid-template-columns: 2fr 2fr 2fr 2fr; */
+    display: grid;
+    /*justify-content: center;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+     grid-template-columns: 2fr 2fr 2fr 2fr;
 }
 
 .title-type-books {
@@ -166,6 +169,11 @@ input {
 
 .btn-loan-book:hover, .btn-info-book:hover {
     background-color: #0087b1; 
+}
+
+#status {
+    margin: 10px 0px;
+    padding: 10px;
 }
 
 /* -------------------- footer -------------------- */

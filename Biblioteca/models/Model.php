@@ -35,7 +35,7 @@ abstract class Model
     {
         $this->connect();
         $this->tableId = $id;
-        $result = pg_query($this->connection, "select * from $this->table where id = $id ORDER BY id");
+        $result = pg_query($this->connection, "select * from $this->table where id = $id");
         $this->desconnect();
 
         return (pg_fetch_all($result)[0]);

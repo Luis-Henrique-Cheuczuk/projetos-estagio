@@ -1,3 +1,8 @@
+<?php
+    require_once ('./models/Book.php');
+    require_once ('./models/User.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <?php
@@ -14,7 +19,7 @@
                     <li><a href="/loans">Empréstimos</a></li>
                     <li><a href="/historic">Histórico</a></li>
                     <li><a href="/data_user">Dados</a></li>
-                    <li><a href="/resources/views/login.php">Sair</a></li>
+                    <li><a href="/">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,15 +36,21 @@
                         foreach($loans as $loan){
                     ?>
                     <div class="books">
+                        <div class="title-type-books">
+                            <?php if ($book = (new Book())->find($loan['book_id'])) { ?>
+                                <b><?= $book['name'] ?></b>
+                        </div>
+                        <hr>
                         <img class="img-book" src="./resources/public/img/book.png" />
-                        <div class="date-book">
-                            <label for="date_start">Data da locação: <?= $loan['date_start'] ?> </label>
-                        </div>
-                        <div class="date-book">
-                            <label for="date_end">Data da entrega: <?= $loan['date_end'] ?></label>
-                        </div>
                         <div class="author-book">
-                            <?= $loan['name'] ?>
+                            <?= $book['author'] ?>
+                        </div>
+                        <?php } ?>
+                        <div class="date-book">
+                            <label for="date_start"><b>Data da locação: </b><?= $loan['date_start'] ?> </label>
+                        </div>
+                        <div class="date-book">
+                            <label for="date_end"><b>Data da entrega: </b><?= $loan['date_end'] ?></label>
                         </div>
 <!--                        <div class="btn-options">-->
 <!--                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>-->

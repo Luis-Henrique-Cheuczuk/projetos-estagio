@@ -29,12 +29,29 @@ switch ($request) {
     case '/home_admin' :
         (new BookControllerAdmin())->index();
         break;
-    case '/register_adminUser' :
-        (new NewAdminClientController())->index();
-        break;
     case '/add_book' :
-        (new NewBookController())->index();
+        (new BookControllerAdmin())->create();
         break;
+    case '/edit_book' :
+        (new BookControllerAdmin())->edit();
+        break;
+    case '/update_book' :
+        (new BookControllerAdmin())->update();
+        header("Location: /home_admin");
+        break;
+    case '/store_book' :
+        (new BookControllerAdmin())->store();
+        header("Location: /home_admin");
+        break;
+
+    case '/register_adminUser' :
+        (new NewAdminClientController())->create();
+        break;
+    case '/store_user' :
+        (new NewAdminClientController())->store();
+        header("Location: /home_admin");
+        break;
+
 
     //Routes User
     case '/home_user' :

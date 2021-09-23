@@ -6,10 +6,16 @@ class BookControllerClient
 {
 
     public $book;
+    protected $id;
+
+    public function __construct()
+    {
+        $this->book = new Book();
+    }
 
     public function index()
     {
-        $booksClient = (new Book())->all();
+        $booksClient = $this->book->all();
         include './resources/views/client/homePage.php';
     }
 

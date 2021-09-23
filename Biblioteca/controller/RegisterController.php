@@ -8,9 +8,14 @@ class RegisterController
 
     public $register;
 
+    public function __construct()
+    {
+        $this->register = new User();
+    }
+
     public function index()
     {
-        $registers = (new User())->all();
+        $registers = $this->register->all();
         include './resources/views/register.php';
     }
 

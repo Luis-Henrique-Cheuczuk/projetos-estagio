@@ -16,7 +16,7 @@
                     <li><a href="/home_admin">Home</a></li>
                     <li><a href="/add_book">Adicionar livro</a></li>
                     <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
-                    <li><a href="./resources/views/login.php">Sair</a></li>
+                    <li><a href="/">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -24,6 +24,10 @@
 
     <section>
         <div class="container">
+            <div class="search">
+                <input class="search-nav" name="serach" type="search" placeholder="Pesquisar Livro..." size="40" />
+                <button type="submit">&#128269;</button><!-- Botão com ícone de pesquisa -->
+            </div>
             <div class="section-books">
                 <div class="type-books">
                 <?php
@@ -43,29 +47,14 @@
                         <hr>
                         <img class="img-book" src="/resources/public/img/book.png" />
                         <div class="title-book">
-<!--                            <b>--><?//= $book['name'] ?><!--</b>-->
-                            <b>Nome de quem emprestou</b>
+                            <b><?= $book['status'] ?></b>
                         </div>
-                        <div class="campos">
-                            <label>Devolver? </label>
-                            <div class="devolution" id="devolution">
-                                <input type="radio" name="devolution" id="yes" required />
-                                <label> Sim </label>
-                                <input type="radio" name="devolution" id="no" required />
-                                <label> Não </label>
+                        <form method="post" action="/edit_book">
+                            <div class="btn-options">
+                                <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
+                                <button type="submit" class="btn-info-book" id="info-book-modal">Atualizar informações </button>
                             </div>
-                        </div>
-                        <div class="date-book">
-                            <label for="date_start">Data da locação: </label>
-                            <input type="date" id="date_start" disabled/>
-                        </div>
-                        <div class="date-book">
-                            <label for="date_end">Data da entrega: </label>
-                            <input type="date" id="date_end" disabled/>
-                        </div>
-                        <div class="btn-options">
-                            <a class="btn-info-book" id="info-book-modal" href="">Atualizar informações</a>
-                        </div>
+                        </form>
                     </div>
                 <?php } ?>
             </div>

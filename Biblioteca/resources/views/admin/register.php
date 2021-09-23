@@ -17,7 +17,7 @@
                     <li><a href="/home_admin">Home</a></li>
                     <li><a href="/add_book">Adicionar livro</a></li>
                     <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
-                    <li><a href="./resources/views/login.php">Sair</a></li>
+                    <li><a href="/">Sair</a></li>
                 </ul>
             </div>
         </nav>
@@ -26,7 +26,7 @@
     <section>
         <div class="container">
             <fieldset>
-                <form method="POST" action="#">
+                <form method="POST" action="/store_user">
                     <div class="input-login">
                         <h1>Cadastre usuário ou admin </h1>
                         <div class="campos">
@@ -46,17 +46,17 @@
 
                         <div class="campos">
                             <label for="phone">Telefone</label>
-                            <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="11" required />
+                            <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="15" required />
                         </div>
 
                         <div class="campos">
                             <label>Tipo da conta</label>
                             <div class="type-user">
-                                <input type="radio" name="typeUser" id="typeUser" required />
+                                <input type="radio" name="type_user" id="typeUser" value="<?= false ?>" required />
                                 <label> Usuário normal</label>
                             </div>
                             <div class="type-user">
-                                <input type="radio" name="typeUser" id="typeAdmin" required />
+                                <input type="radio" name="type_user" id="typeAdmin" value="<?= true ?>" required />
                                 <label> Usuário Admin</label>
                             </div>
                         </div>

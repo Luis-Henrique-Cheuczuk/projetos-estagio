@@ -6,16 +6,22 @@ class DataUserController
 {
 
     public $data_client;
+    protected $id;
+
+    public function __construct()
+    {
+        $this->data_client = new User();
+    }
 
     public function index()
     {
-        $data_clients = (new User())->all();
+        $data_clients = $this->data_client->oneToMany('loans', 'user_id', 'id');
         include './resources/views/client/dataUser.php';
     }
 
-    public function show(int $id)
+    public function show()
     {
-        $this->data_client = find($id);
+        $this->data_client = find($this->id);
     }
 
     public function create()

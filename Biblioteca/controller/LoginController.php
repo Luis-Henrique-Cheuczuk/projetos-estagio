@@ -8,9 +8,14 @@ class LoginController
 
     public $login;
 
+    public function __construct()
+    {
+        $this->login = new User();
+    }
+
     public function index()
     {
-        $logins = (new User())->all();
+        $logins = $this->login->all();
         include './resources/views/login.php';
     }
 

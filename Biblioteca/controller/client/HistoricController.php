@@ -6,10 +6,16 @@ class HistoricController
 {
 
     public $historic;
+    protected $id;
+
+    public function __construct()
+    {
+        $this->historic = new Loan();
+    }
 
     public function index()
     {
-        $hist = (new Loan())->all();
+        $historics = $this->historic->all();
         include './resources/views/client/historic.php';
     }
 

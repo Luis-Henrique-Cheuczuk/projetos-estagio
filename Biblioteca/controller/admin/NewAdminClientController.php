@@ -5,39 +5,57 @@ require_once './models/User.php';
 class NewAdminClientController
 {
 
-    public $new_admin_client;
+    public $user;
+    protected $id;
+    protected $data;
+
+    public function __construct()
+    {
+        $this->user = new User();
+        $this->data = array
+        (
+            "email" => $_POST['email'],
+            "password" => $_POST['password'],
+            "name" => $_POST['name'],
+            "phone" => $_POST['phone'],
+            "is_admin" => (!!$_POST['type_user']),
+            "created_at" => NULL,
+            "updated_at" => NULL,
+            "deleted_at" => NULL
+        );
+//        $this->id = $_POST['id'];
+    }
 
     public function index()
     {
-        $new_admins_clients = (new User())->all();
+        $this->user->all();
         include './resources/views/admin/register.php';
     }
 
-    public function show(int $id)
+    public function show()
     {
-        $this->new_admin_client = find($id);
+        $this->user = find($this->id);
     }
 
     public function create()
     {
-
+        include './resources/views/admin/register.php';
     }
 
     public function store()
     {
         //ação de criar livros
-        $books = (new Book())->create();
-        include './resources/views/client/homePage.php';
+        $this->user->create($this->data);
     }
 
     public function edit()
     {
-        //chamar a tela de edição de livros
+        include './resources/views/admin/updateBook.php';
     }
 
     public function update()
     {
-        //ação de editar livro
+        $books_update = $this->user->update($this->id, $this->data);
     }
 
     public function delete()
