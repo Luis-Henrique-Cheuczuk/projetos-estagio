@@ -33,8 +33,9 @@
                 </div>
                 <div class="type-books">
                     <?php
-                        foreach($loans as $loan){
-                    ?>
+                        foreach($users as $user){
+                            if ($loan = (new Loan())->find($user['id'])) {
+                        ?>
                     <div class="books">
                         <div class="title-type-books">
                             <?php if ($book = (new Book())->find($loan['book_id'])) { ?>
@@ -43,7 +44,7 @@
                         <hr>
                         <img class="img-book" src="./resources/public/img/book.png" />
                         <div class="author-book">
-                            <?= $book['author'] ?>
+                            <?= $book['id'] ?>
                         </div>
                         <?php } ?>
                         <div class="date-book">
@@ -56,7 +57,8 @@
 <!--                            <a class="btn-info-book" id="contact-modal" onclick="openModal()">Informações</a>-->
 <!--                        </div>-->
                     </div>
-                    <?php } ?>
+                    <?php }
+                        }?>
                 </div>
             </div>
     </section>

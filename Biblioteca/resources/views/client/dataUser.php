@@ -27,13 +27,9 @@
     <section>
         <div class="container">
             <fieldset>
-                <form method="POST" action="/controller/client/DataUserController.php">
+                <form method="POST" action="/update_data_user">
                     <div class="input-login">
                         <h1>Seus dados</h1>
-                        <?php
-                            foreach($data_clients as $client){
-                                if ($user = (new User())->find($client['id'])) {
-                        ?>
                         <div class="campos">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" title="Digite seu e-mail" size="30" value="<?= $user['email'] ?>" />
@@ -58,8 +54,6 @@
                         <div class="btn-options">
                             <button class="btn-concluded" type="submit" >Concluido</button>
                         </div>
-                        <?php }
-                         } ?>
                     </div>
                 </form>
             </fieldset>

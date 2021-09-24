@@ -31,7 +31,7 @@ abstract class Model
         pg_close($this->connection);
     }
 
-    public function find(int $id) 
+    public function find($id)
     {
         $this->connect();
         $this->tableId = $id;

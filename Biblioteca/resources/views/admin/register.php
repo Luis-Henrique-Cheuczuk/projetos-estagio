@@ -14,9 +14,10 @@
                     include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="/home_admin">Home</a></li>
-                    <li><a href="/add_book">Adicionar livro</a></li>
-                    <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
+                    <li><a href="/admin/home_admin">Home</a></li>
+                    <li><a href="/admin/add_book">Adicionar livro</a></li>
+                    <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
+                    <li><a href="/admin/list_user">Listar Usuários</a></li>
                     <li><a href="/">Sair</a></li>
                 </ul>
             </div>
@@ -26,7 +27,7 @@
     <section>
         <div class="container">
             <fieldset>
-                <form method="POST" action="/store_user">
+                <form method="POST" action="/admin/store_user">
                     <div class="input-login">
                         <h1>Cadastre usuário ou admin </h1>
                         <div class="campos">

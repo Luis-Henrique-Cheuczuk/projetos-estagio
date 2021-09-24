@@ -14,9 +14,10 @@ include("./resources/views/layout/head.php");
 include("./resources/views/layout/nav.php");
 ?>
 <ul class="items">
-    <li><a href="/home_admin">Home</a></li>
-    <li><a href="/add_book">Adicionar livro</a></li>
-    <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
+    <li><a href="/admin/home_admin">Home</a></li>
+    <li><a href="/admin/add_book">Adicionar livro</a></li>
+    <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
+    <li><a href="/admin/list_user">Listar Usuários</a></li>
     <li><a href="/">Sair</a></li>
 </ul>
 </div>
@@ -28,7 +29,7 @@ include("./resources/views/layout/nav.php");
         <div id="modal-screen-add-book" class="modal-screen">
             <div class="modal-book">
                 <h3>Atualizar Livro</h3>
-                <form method="post" action="/update_book">
+                <form method="post" action="/admin/update_book">
                     <div class="books">
                         <div class="campos">
                             <label for="title-book">Título do livro</label>

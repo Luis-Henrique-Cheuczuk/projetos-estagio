@@ -2,7 +2,7 @@
 
 require_once './models/User.php';
 
-class NewAdminClientController
+class UserControllerAdmin
 {
 
     public $user;
@@ -23,44 +23,45 @@ class NewAdminClientController
             "updated_at" => NULL,
             "deleted_at" => NULL
         );
-//        $this->id = $_POST['id'];
+        $this->id = $_POST['id'];
     }
 
     public function index()
     {
-        $this->user->all();
-        include './resources/views/admin/register.php';
+        $users = $this->user->all();
+        include './resources/views/admin/users.php';
     }
 
     public function show()
     {
-        $this->user = find($this->id);
+        $this->user->find($this->id);
     }
 
     public function create()
     {
-        include './resources/views/admin/register.php';
+
     }
 
     public function store()
     {
-        //ação de criar livros
-        $this->user->create($this->data);
+
     }
 
     public function edit()
     {
-        include './resources/views/admin/updateBook.php';
+        $id = $_POST['id'];
+        $user = (new User())->find($id);
+        include './resources/views/admin/updateUsers.php';
     }
 
     public function update()
     {
-        $books_update = $this->user->update($this->id, $this->data);
+        $this->user->update($this->id, $this->data);
     }
 
     public function delete()
     {
-        //ação de deletar o livro
+        $this->user->delete($this->id);
     }
 
 }

@@ -19,36 +19,36 @@ class BookControllerClient
         include './resources/views/client/homePage.php';
     }
 
-    public function show(int $id)
+    public function show()
     {
-        $this->book = find($id);
+        $this->book = find($this->id);
     }
 
-    public function create()
-    {
-
-    }
-
-    public function store()
-    {
-        //ação de criar livros
-        $books = (new Book())->create();
-        include './resources/views/client/homePage.php';
-    }
-
-    public function edit()
-    {
-        //chamar a tela de edição de livros
-    }
-
-    public function update()
-    {
-        //ação de editar livro
-    }
-
-    public function delete()
-    {
-        //ação de deletar o livro
-    }
+//    public function create()
+//    {
+//
+//    }
+//
+//    public function store()
+//    {
+//        //ação de criar livros
+//        $books = (new Book())->create();
+//        include './resources/views/client/homePage.php';
+//    }
+//
+//    public function edit()
+//    {
+//        //chamar a tela de edição de livros
+//    }
+//
+//    public function update()
+//    {
+//        //ação de editar livro
+//    }
+//
+//    public function delete()
+//    {
+//        //ação de deletar o livro
+//    }
 
 }

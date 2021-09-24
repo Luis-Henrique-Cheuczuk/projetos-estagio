@@ -20,7 +20,7 @@
     <section>
         <div class="container">
             <fieldset>
-                <form method="POST" action="#">
+                <form method="POST" action="/store_register">
                     <div class="input-login">
                         <h1>Faça seu cadastro </h1>
                         <div class="campos">
@@ -40,11 +40,12 @@
 
                         <div class="campos">
                             <label for="phone">Telefone</label>
-                            <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="11" required />
+                            <input type="tel" name="phone" id="phone" title="Digite seu telefone" size="30" minlength="11" maxlength="15" required />
                         </div>
 
                         <div class="btn-options">
                             <button class="btn-concluded" type="submit" >Concluido</button>
+                            <a id="cancel" class="btn-info-book" href="/">Cancelar</a>
                         </div>
                     </div>
                 </form>

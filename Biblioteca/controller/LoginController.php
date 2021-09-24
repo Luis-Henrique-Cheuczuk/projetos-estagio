@@ -7,6 +7,7 @@ class LoginController
 {
 
     public $login;
+    protected $id;
 
     public function __construct()
     {
@@ -19,9 +20,9 @@ class LoginController
         include './resources/views/login.php';
     }
 
-    public function show(int $id)
+    public function show()
     {
-        $this->login = find($id);
+        $this->login = find($this->id);
     }
 
     public function create()
@@ -31,24 +32,22 @@ class LoginController
 
     public function store()
     {
-        //ação de criar livros
-        $books = (new Book())->create();
-        include './resources/views/client/homePage.php';
+
     }
 
     public function edit()
     {
-        //chamar a tela de edição de livros
+
     }
 
     public function update()
     {
-        //ação de editar livro
+
     }
 
     public function delete()
     {
-        //ação de deletar o livro
+
     }
 
 }

@@ -15,13 +15,13 @@ class LoanController
 
     public function index()
     {
-        $loans = $this->loan->all();
+        $users = $this->loan->all();
         include './resources/views/client/loans.php';
     }
 
     public function show()
     {
-        $this->loan = find();
+        $this->loan = find($this->id);
     }
 
     public function create()

@@ -7,48 +7,89 @@ class RegisterController
 {
 
     public $register;
+    protected $id;
+    protected $data_user;
+    protected $data;
 
     public function __construct()
     {
         $this->register = new User();
+        $this->data_user = array
+        (
+            "email" => $_POST['email'],
+            "password" => $_POST['password'],
+            "name" => $_POST['name'],
+            "phone" => $_POST['phone'],
+            "is_admin" => false,
+            "created_at" => NULL,
+            "updated_at" => NULL,
+            "deleted_at" => NULL
+        );
+        $this->data = array
+        (
+            "email" => $_POST['email'],
+            "password" => $_POST['password'],
+            "name" => $_POST['name'],
+            "phone" => $_POST['phone'],
+            "is_admin" => (!!$_POST['type_user']),
+            "created_at" => NULL,
+            "updated_at" => NULL,
+            "deleted_at" => NULL
+        );
     }
 
     public function index()
     {
-        $registers = $this->register->all();
+        $this->register->all();
         include './resources/views/register.php';
     }
 
-    public function show(int $id)
+    public function indexClientAdmin()
     {
-        $this->register = find($id);
+        $this->register->all();
+        include './resources/views/admin/register.php';
+    }
+
+    public function show()
+    {
+        $this->register->find($this->id);
     }
 
     public function create()
     {
+        include './resources/views/register.php';
+    }
 
+    public function createClientAdmin()
+    {
+        include './resources/views/admin/register.php';
     }
 
     public function store()
     {
-        //ação de criar livros
-        $books = (new Book())->create();
-        include './resources/views/client/homePage.php';
+        //ação de criar usuario
+        $this->register->create($this->data_user);
+    }
+
+    public function storeClientAdmin()
+    {
+        //ação de criar usuario
+        $this->register->create($this->data);
     }
 
     public function edit()
     {
-        //chamar a tela de edição de livros
+        include './resources/views/admin/updateBook.php';
     }
 
-    public function update()
+    public function updateClientAdmin()
     {
-        //ação de editar livro
+        $books_update = $this->register->update($this->id, $this->data);
     }
 
-    public function delete()
+    public function deleteClientAdmin()
     {
-        //ação de deletar o livro
+        //ação de deletar user
     }
 
 }

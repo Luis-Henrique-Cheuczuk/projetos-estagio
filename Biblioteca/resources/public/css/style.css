@@ -106,6 +106,8 @@ input {
 }
 
 .btn-options {
+    display: flex;
+    justify-content: center;
     margin: 10px 0px;
 }
 
@@ -176,6 +178,16 @@ input {
 
 .btn {
     display: flex;
+}
+
+.list_users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.users {
+    margin: 20px 10px;
+    border: 1px solid #000;
 }
 
 /* -------------------- footer -------------------- */

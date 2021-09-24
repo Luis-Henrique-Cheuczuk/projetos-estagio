@@ -13,9 +13,10 @@
                     include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="/home_admin">Home</a></li>
-                    <li><a href="/add_book">Adicionar livro</a></li>
-                    <li><a href="/register_adminUser">Cadastrar usuário/admin</a></li>
+                    <li><a href="/admin/home_admin">Home</a></li>
+                    <li><a href="/admin/add_book">Adicionar livro</a></li>
+                    <li><a href="/admin/register_adminUser">Cadastrar usuário/admin</a></li>
+                    <li><a href="/admin/list_user">Listar Usuários</a></li>
                     <li><a href="/">Sair</a></li>
                 </ul>
             </div>
@@ -31,7 +32,7 @@
             <div class="section-books">
                 <div class="type-books">
                 <?php
-                    foreach($books as $book){     
+                    foreach($books as $book){
                 ?>
                     <!-- <h1>Titulo do Livro: <?= $book['name'] ?></h1> -->
                     <!-- <h1>Autor: <?= $book['author'] ?></h1> -->
@@ -50,13 +51,13 @@
                             <b><?= $book['status'] ?></b>
                         </div>
                         <div class="btn">
-                            <form method="post" action="/edit_book">
+                            <form method="post" action="/admin/edit_book">
                                 <div class="btn-options">
                                     <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
                                     <button type="submit" class="btn-info-book" id="info-book-modal">Atualizar livro </button>
                                 </div>
                             </form>
-                            <form method="post" action="/delete_book">
+                            <form method="post" action="/admin/delete_book">
                                 <div class="btn-options">
                                     <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
                                     <button type="submit" class="btn-info-book" id="info-book-modal">Excluir livro </button>

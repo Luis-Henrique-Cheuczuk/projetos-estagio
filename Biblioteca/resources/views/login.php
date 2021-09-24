@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="btn-options">
-                            <a class="btn-concluded" href="/home_admin">Entrar Admin</a>
+                            <a class="btn-concluded" href="/admin/home_admin">Entrar Admin</a>
                             <a class="btn-concluded" href="/home_user">Entrar User</a>
                             <!-- <button class="btn-concluded" type="submit" >Entrar</button> -->
                             <a class="btn-register" href="/register">Registre-se</a>

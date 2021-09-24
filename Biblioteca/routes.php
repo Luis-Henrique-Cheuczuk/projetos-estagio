@@ -6,7 +6,7 @@ require  __DIR__ . '/controller/RegisterController.php';
 
 require __DIR__ . '/controller/admin/BookControllerAdmin.php';
 require __DIR__ . '/controller/admin/NewBookController.php';
-require __DIR__ . '/controller/admin/NewAdminClientController.php';
+require  __DIR__ . '/controller/admin/UserControllerAdmin.php';
 
 require __DIR__ . '/controller/client/BookControllerClient.php';
 require __DIR__ . '/controller/client/LoanController.php';
@@ -21,39 +21,57 @@ switch ($request) {
 
     //Register
     case '/register' :
-        (new RegisterController())->index();
+        (new RegisterController())->create();
+        break;
+    case '/store_register' :
+        (new RegisterController())->store();
+        header("Location: /");
         break;
 
 
     //Routes Admin
-    case '/home_admin' :
+    case '/admin/home_admin' :
         (new BookControllerAdmin())->index();
         break;
-    case '/add_book' :
+    case '/admin/add_book' :
         (new BookControllerAdmin())->create();
         break;
-    case '/edit_book' :
+    case '/admin/edit_book' :
         (new BookControllerAdmin())->edit();
         break;
-    case '/update_book' :
+    case '/admin/update_book' :
         (new BookControllerAdmin())->update();
-        header("Location: /home_admin");
+        header("Location: /admin/home_admin");
         break;
-    case '/store_book' :
+    case '/admin/store_book' :
         (new BookControllerAdmin())->store();
-        header("Location: /home_admin");
+        header("Location: /admin/home_admin");
         break;
-    case '/delete_book' :
+    case '/admin/delete_book' :
         (new BookControllerAdmin())->delete();
-        header("Location: /home_admin");
+        header("Location: /admin/home_admin");
         break;
 
-    case '/register_adminUser' :
-        (new NewAdminClientController())->create();
+    case '/admin/register_adminUser' :
+        (new RegisterController())->createClientAdmin();
         break;
-    case '/store_user' :
-        (new NewAdminClientController())->store();
-        header("Location: /home_admin");
+    case '/admin/store_user' :
+        (new RegisterController())->storeClientAdmin();
+        header("Location: /admin/home_admin");
+        break;
+    case '/admin/list_user' :
+        (new UserControllerAdmin())->index();
+        break;
+    case '/admin/data_user' :
+        (new UserControllerAdmin())->edit();
+        break;
+    case '/admin/update_user' :
+        (new UserControllerAdmin())->update();
+        header("Location: /admin/home_admin");
+        break;
+    case '/admin/delete_user' :
+        (new UserControllerAdmin())->delete();
+        header("Location: /admin/home_admin");
         break;
 
 
@@ -68,7 +86,11 @@ switch ($request) {
         (new HistoricController())->index();
         break;
     case '/data_user' :
-        (new DataUserController())->index();
+        (new DataUserController())->edit();
+        break;
+    case '/update_data_user' :
+        (new DataUserController())->update();
+        header("Location: /home_user");
         break;
     default:
         http_response_code(404);

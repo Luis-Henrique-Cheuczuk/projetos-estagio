@@ -33,7 +33,6 @@
                 <div class="type-books">
                 <?php
                     foreach($booksClient as $book){
-//                        foreach ($loans as $loan){
                 ?>
                     <!-- <h1>Titulo do Livro: <?= $book['name'] ?></h1> -->
                     <!-- <h1>Autor: <?= $book['author'] ?></h1> -->
