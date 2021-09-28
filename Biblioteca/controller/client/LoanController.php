@@ -15,7 +15,7 @@ class LoanController
 
     public function index()
     {
-        $users = $this->loan->all();
+        $usersloans = $this->loan->all();
         include './resources/views/client/loans.php';
     }
 

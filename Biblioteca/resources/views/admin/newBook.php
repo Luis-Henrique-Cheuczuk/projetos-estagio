@@ -57,7 +57,7 @@ include("./resources/views/layout/nav.php");
                         </div>
                         <div class="btn-options">
                             <button class="btn-concluded" type="submit" >Concluido</button>
-                            <a id="cancel" class="btn-info-book" href="/home_admin">Cancelar</a>
+                            <a id="cancel" class="btn-info-book" href="/admin/home_admin">Cancelar</a>
                         </div>
 
                     </form>

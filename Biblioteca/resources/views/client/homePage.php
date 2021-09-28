@@ -13,16 +13,16 @@
                     include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="/home_user">Home</a></li>
-                    <li><a href="/loans">Empréstimos</a></li>
-                    <li><a href="/historic">Histórico</a></li>
-                    <li><a href="/data_user">Dados</a></li>
+                    <li><a href="/client/home_user">Home</a></li>
+                    <li><a href="/client/loans">Empréstimos</a></li>
+                    <li><a href="/client/historic">Histórico</a></li>
+                    <li><a href="/client/data_user">Dados</a></li>
                     <li><a href="/">Sair</a></li>
                 </ul>
             </div>
         </nav>
     </section>
-
+s
     <section>
         <div class="container">
             <div class="search">
@@ -56,13 +56,20 @@
                         <div class="description-book">
                             <p><?= $book['description'] ?></p>
                         </div>
+                        <hr>
                         <div class="btn-options">
-                            <a class="btn-loan-book" href="">Emprestar</a>
+                            <?php
+                                if(($book['status'] == 'pending') || ($book['status'] == 'unavailable'))
+                            {
+                                echo "Status: ".$book['status'];
+                            }else{
+                                    echo '<a class="btn-loan-book" href="">Emprestar</a>';
+                                }
+                            ?>
                         <!-- <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a> -->
                         </div> 
                     </div>
-                    <?php
-                        }?>
+                    <?php } ?>
             </div>
         </div>
     </section>

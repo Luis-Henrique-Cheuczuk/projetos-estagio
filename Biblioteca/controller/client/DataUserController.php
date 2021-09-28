@@ -45,8 +45,8 @@ class DataUserController
     public function store()
     {
         //ação de criar livros
-        $books = (new Book())->create();
-        include './resources/views/client/homePage.php';
+//        $books = (new Book())->create();
+//        include './resources/views/client/homePage.php';
     }
 
     public function edit()

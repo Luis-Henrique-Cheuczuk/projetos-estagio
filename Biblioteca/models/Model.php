@@ -9,6 +9,7 @@ abstract class Model
     private $dbPassword = 'pitcho';
     private $connection = null;
     private $table = null;
+    private $tableId = null;
 
     public function connect()
     {
@@ -29,6 +30,18 @@ abstract class Model
     private function desconnect()
     {
         pg_close($this->connection);
+    }
+
+    public function validation($email, $password)
+    {
+        $this->connect();
+        $result = pg_query($this->connection, "SELECT * FROM users WHERE email = '$email' AND password = '$password'");
+        $login_status = pg_num_rows($result);
+        if($login_status > 0) {
+            $res = pg_fetch_all($result);
+            return $res[0]['is_admin'];
+        }
+        $this->desconnect();
     }
 
     public function find($id)

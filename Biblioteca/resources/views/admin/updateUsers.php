@@ -29,7 +29,7 @@ include("./resources/views/layout/nav.php");
         <fieldset>
             <form method="POST" action="/admin/update_user">
                 <div class="input-login">
-                    <h1>Seus dados</h1>
+                    <h1>Atualizar dados</h1>
                     <div class="campos">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" id="email" title="Digite seu e-mail" size="30" value="<?= $user['email'] ?>" />

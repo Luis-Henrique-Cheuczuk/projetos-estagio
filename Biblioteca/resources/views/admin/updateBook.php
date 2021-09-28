@@ -57,7 +57,7 @@ include("./resources/views/layout/nav.php");
                         <div class="btn-options">
                             <input type="hidden" name="id" value="<?= $book['id'] ?>"/>
                             <button type="submit" class="btn-info-book" id="info-book-modal">Concluido </button>
-                            <a id="cancel" class="btn-info-book" href="/home_admin">Cancelar</a>
+                            <a id="cancel" class="btn-info-book" href="/admin/home_admin">Cancelar</a>
                         </div>
                     </div>
                 </form>

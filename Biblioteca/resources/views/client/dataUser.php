@@ -14,10 +14,10 @@
                     include("./resources/views/layout/nav.php");
                 ?>
                 <ul class="items">
-                    <li><a href="/home_user">Home</a></li>
-                    <li><a href="/loans">Empréstimos</a></li>
-                    <li><a href="/historic">Histórico</a></li>
-                    <li><a href="/data_user">Dados</a></li>
+                    <li><a href="/client/home_user">Home</a></li>
+                    <li><a href="/client/loans">Empréstimos</a></li>
+                    <li><a href="/client/historic">Histórico</a></li>
+                    <li><a href="/client/data_user">Dados</a></li>
                     <li><a href="/">Sair</a></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
     <section>
         <div class="container">
             <fieldset>
-                <form method="POST" action="/update_data_user">
+                <form method="POST" action="/client/update_data_user">
                     <div class="input-login">
                         <h1>Seus dados</h1>
                         <div class="campos">
@@ -52,6 +52,7 @@
                         </div>
 
                         <div class="btn-options">
+                            <input type="hidden" name="id" value="<?= $user['id'] ?>" />
                             <button class="btn-concluded" type="submit" >Concluido</button>
                         </div>
                     </div>

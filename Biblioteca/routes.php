@@ -18,6 +18,9 @@ switch ($request) {
     case '/' :
         (new LoginController())->index();
         break;
+    case '/login' :
+        (new LoginController())->validation();
+        break;
 
     //Register
     case '/register' :
@@ -67,7 +70,7 @@ switch ($request) {
         break;
     case '/admin/update_user' :
         (new UserControllerAdmin())->update();
-        header("Location: /admin/home_admin");
+        header("Location: /admin/list_user");
         break;
     case '/admin/delete_user' :
         (new UserControllerAdmin())->delete();
@@ -76,21 +79,21 @@ switch ($request) {
 
 
     //Routes User
-    case '/home_user' :
+    case '/client/home_user' :
         (new BookControllerClient())->index();
         break;
-    case '/loans' :
-        (new LoanController())->index();
+    case '/client/loans' :
+            (new LoanController())->index();
         break;
-    case '/historic' :
+    case '/client/historic' :
         (new HistoricController())->index();
         break;
-    case '/data_user' :
+    case '/client/data_user' :
         (new DataUserController())->edit();
         break;
-    case '/update_data_user' :
+    case '/client/update_data_user' :
         (new DataUserController())->update();
-        header("Location: /home_user");
+        header("Location: /client/home_user");
         break;
     default:
         http_response_code(404);
