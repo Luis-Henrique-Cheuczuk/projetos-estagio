@@ -52,8 +52,8 @@ class DataUserController
     public function edit()
     {
         //chamar a tela de edição de dados
-        $id = $_POST['id'];
-        $data_client = (new User())->find($id);
+//        $id = $_POST['id'];
+//        $data_client = (new User())->find($id);
         include './resources/views/client/dataUser.php';
     }
 
@@ -74,7 +74,7 @@ class DataUserController
     public function updateClient()
     {
         //ação de editar dados
-        $this->data_client->update($this->id, $this->data);
+        $this->data_client->update($_SESSION['id'], $this->data);
     }
 
     public function delete()

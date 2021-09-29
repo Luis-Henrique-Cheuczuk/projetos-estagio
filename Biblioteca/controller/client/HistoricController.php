@@ -21,7 +21,7 @@ class HistoricController
 
     public function show()
     {
-        $this->historic = find();
+        $this->historic = find($this->id);
     }
 
     public function create()

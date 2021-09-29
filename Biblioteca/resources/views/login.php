@@ -32,17 +32,6 @@
                             <label for="password">Senha</label>
                             <input type="password" name="password" id="password" title="Digite sua senha" size="30" />
                         </div>
-<!--                        <div class="campos">-->
-<!--                            <label>Tipo da conta</label>-->
-<!--                            <div class="type-user">-->
-<!--                                <input type="radio" name="type_user" id="typeUser" value = 0 required />-->
-<!--                                <label> Usuário normal</label>-->
-<!--                            </div>-->
-<!--                            <div class="type-user">-->
-<!--                                <input type="radio" name="type_user" id="typeAdmin" value = 1 required />-->
-<!--                                <label> Usuário Admin</label>-->
-<!--                            </div>-->
-<!--                        </div>-->
                         <div class="btn-options">
                             <!--                                <input type="hidden" name="id" value="--><?//= $user['id'] ?><!--/>-->
                             <button type="submit" class="btn-info-book" > Entrar </button>

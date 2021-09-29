@@ -26,8 +26,7 @@ s
     <section>
         <div class="container">
             <div class="search">
-                <input class="search-nav" type="search" placeholder="Pesquisar Livro..." size="40" />
-                <button type="submit">&#128269;</button><!-- Botão com ícone de pesquisa -->
+                <p><b>Usuário logado: </b> <?= $_SESSION['name'] ?></p>
             </div>
             <div class="section-books">
                 <div class="type-books">
@@ -59,13 +58,18 @@ s
                         <hr>
                         <div class="btn-options">
                             <?php
-                                if(($book['status'] == 'pending') || ($book['status'] == 'unavailable'))
-                            {
+                                if(($book['status'] == 'pending') || ($book['status'] == 'unavailable')){
+
                                 echo "Status: ".$book['status'];
                             }else{
-                                    echo '<a class="btn-loan-book" href="">Emprestar</a>';
-                                }
-                            ?>
+                                    ?>
+
+                                    <form method="post" action="/client/store">
+                                        <input type="hidden" name="id" value="<?= $book['id'] ?>" />
+                                        <button class="btn-concluded" type="submit" >Emprestar</button>
+                                    </form>
+
+                            <?php } ?>
                         <!-- <a class="btn-info-book" id="info-book-modal" onclick="openModalInfoBook()">Atualizar informações</a> -->
                         </div> 
                     </div>

@@ -85,6 +85,14 @@ switch ($request) {
     case '/client/loans' :
             (new LoanController())->index();
         break;
+    case '/client/store' :
+        (new LoanController())->store();
+        header("Location: /client/home_user");
+        break;
+    case '/client/devolution' :
+        (new LoanController())->delete();
+        header("Location: /client/home_user");
+        break;
     case '/client/historic' :
         (new HistoricController())->index();
         break;
@@ -92,9 +100,14 @@ switch ($request) {
         (new DataUserController())->edit();
         break;
     case '/client/update_data_user' :
-        (new DataUserController())->update();
-        header("Location: /client/home_user");
+        (new DataUserController())->updateClient();
+        header("Location: /");
         break;
+
+
+
+
+
     default:
         http_response_code(404);
         require __DIR__ . '/resources/views/404.php';
